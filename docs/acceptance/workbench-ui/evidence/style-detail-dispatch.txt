@@ -1,0 +1,136 @@
+Browser tab: 7, Title: "真人实拍 · Reelbench", URL: "https://reelbenchai.com/v1/styles/urban-comedy-live-action".
+1 AXWebArea 真人实拍 · Reelbench, URL: reelbenchai.com/v1/styles/urban-comedy-live-action
+	2 container
+		78 link Description: 工作台, Value: reelbenchai.com/v1/dashboard
+		79 text ›
+		80 text 画风
+		81 container 工作台
+			82 link Description: RB, Help: 工作台, Value: reelbenchai.com/v1/dashboard
+			83 link Description: 首页, Value: reelbenchai.com/v1/dashboard
+			84 link Description: 创意, Help: 创意市场, Value: reelbenchai.com/v1/creative-templates
+			85 link Description: 资产库, Value: reelbenchai.com/v1/asset-library
+			86 link Description: 设置, Value: reelbenchai.com/v1/settings
+			87 button (collapsed) 本 用户中心, Help: 账号：本机, Secondary Actions: Expand
+				88 text 本
+				89 text 用户中心
+		90 container 画风分区
+			91 text 设置
+			92 link Description: 总览, Value: reelbenchai.com/v1/settings
+			93 text 生成
+			94 link Description: 模型与分配, Value: reelbenchai.com/v1/settings/models
+			95 link Description: ComfyUI, Value: reelbenchai.com/v1/settings/comfyui
+			96 link Description: 画风, Value: reelbenchai.com/v1/settings/styles
+			97 text 运行
+			98 link Description: 队列与提示词, Value: reelbenchai.com/v1/settings/generation
+			99 link Description: 存储目录, Value: reelbenchai.com/v1/settings/storage
+			100 text 这台机器
+			101 link Description: 本机环境, Value: reelbenchai.com/v1/settings/env
+			102 link Description: 内容更新, Value: reelbenchai.com/v1/settings/updates
+			103 link Description: 模型试运行, Value: reelbenchai.com/v1/settings/diagnostics
+			104 text 更多
+			105 link Description: 系统提示词, Value: reelbenchai.com/v1/system-prompts
+			106 link Description: 调用日志, Value: reelbenchai.com/v1/logs
+		107 container
+			108 text 画风 · STYLE
+			109 heading 真人实拍, Value: 1
+				110 text 真人实拍
+			111 link Description: 回到设置, Value: reelbenchai.com/v1/settings/styles
+			112 text 真人电影质感：真实比例、自然皮肤、现场光源与可信的镜头光学。
+		113 text 内置
+		114 text urban-comedy-live-action
+		115 text 目前没有任何地方指着它
+		116 container
+			117 heading 封面, Value: 3
+				118 text 封面
+			119 image 真人实拍封面
+			120 text 画风墙上显示的就是它。16:9 最好。
+			121 button 上传封面
+			122 button 清除
+		123 container
+			124 heading 在列表里的位置, Value: 3
+				125 text 在列表里的位置
+			126 text 画风墙和每个选择器都按这个顺序排。
+			127 button ↑ 前移
+			128 button ↓ 后移
+			129 text 第 3 / 6
+		130 container
+			131 heading 基本信息, Value: 3
+				132 text 基本信息
+			133 text 名字
+			134 text field (settable) 名字, Value: 真人实拍
+			135 text 分类 
+			136 text 只用于分组显示
+			137 text field (settable) 分类 只用于分组显示, Value: 真人实拍
+			138 text 一句话说明 
+			139 text 选择器里显示
+			140 text field (settable) 一句话说明 选择器里显示, Value: 真人电影质感：真实比例、自然皮肤、现场光源与可信的镜头光学。
+			141 text 标签 
+			142 text 顿号或逗号分隔
+			143 text field (settable) 标签 顿号或逗号分隔, Value: 轻喜剧、真人实拍、写实人物
+		144 container
+			145 heading 四个维度, Value: 3
+				146 text 四个维度
+			147 text 改这四项不会自动改下面的提示词——提示词可能是你手写过的。 想让它按新维度重写，点「重新生成提示词」，生成后确认再保存。 题材世界 
+			148 text 只用于归类和推荐，不进提示词
+			149 pop up button (collapsed, settable) 题材世界 只用于归类和推荐，不进提示词, Value: 当代都市, Secondary Actions: Expand
+				150 menu
+					151 （不指定）
+					152 仙侠
+					153 (selected) 当代都市
+					154 古装历史
+					155 悬疑犯罪
+					156 未来科幻
+					157 自然乡野
+			158 text 叙事气质 
+			159 text 决定色彩与光影
+			160 pop up button (collapsed, settable) 叙事气质 决定色彩与光影, Value: 轻喜剧, Secondary Actions: Expand
+				161 menu
+					162 （不指定）
+					163 宏大叙事
+					164 暗黑诡谲
+					165 (selected) 轻喜剧
+					166 唯美浪漫
+					167 温暖治愈
+			168 text 视觉媒介 
+			169 text 决定材质与渲染体系
+			170 pop up button (collapsed, settable) 视觉媒介 决定材质与渲染体系, Value: 真人实拍, Secondary Actions: Expand
+				171 menu
+					172 （不指定）
+					173 (selected) 真人实拍
+					174 3D 动漫
+					175 3D 卡通
+					176 手绘动画
+					177 水墨动画
+			178 text 人物造型 
+			179 text 决定比例与五官
+			180 pop up button (collapsed, settable) 人物造型 决定比例与五官, Value: 写实人物, Secondary Actions: Expand
+				181 menu
+					182 （不指定）
+					183 (selected) 写实人物
+					184 半写实仿真人
+					185 动漫角色
+					186 风格化卡通
+			187 button 重新生成提示词
+		188 container
+			189 heading 画风提示词, Value: 3
+				190 text 画风提示词
+			191 text 出图时拼在提示词最前面。用英文写、写成对画面的描述（「The image is …」），不要写成给模型的指令——Qwen 出图只从开头那句读画风，「以本段为准、忽略后文」这类话它不理。 按段发：[Characters] [Avoid in characters] 只给人物图，[Scenes] 只给场景图，[Props] 只给道具图，其余各段所有图都带，分镜图带全部。自己加的段所有图都带。[Avoid…] 那几行在 Qwen 文生图时挪进负面提示词。
+			192 text entry area (settable)
+			193 text 0 字
+		194 container
+			195 heading 历次版本 1, Value: 3
+				196 text 历次版本  1
+			197 text 每次保存都留下被它替换掉的那一版。出厂文本是最早的那一条。
+			198 content list
+				199 container
+					200 text 第 1 版 2026-10-08 22:42 出厂 当前 0 字
+					201 button 查看
+					202 text 出厂版本
+		203 text field (settable)
+		204 button (disabled) 保存
+		205 button 删除
+		75 text 预览
+		76 text 站上的演示程序，只读
+		77 button 获取工作台
+
+The focused UI element is 1 AXWebArea 真人实拍 · Reelbench, URL: reelbenchai.com/v1/styles/urban-comedy-live-action

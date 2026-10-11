@@ -1,0 +1,48 @@
+Browser tab: 7, Title: "Reelbench · AI短视频制作工作台", URL: "https://reelbenchai.com/v1/asset-library".
+1 AXWebArea Reelbench · AI短视频制作工作台, URL: reelbenchai.com/v1/asset-library
+	2 container
+		3 container 工作台
+			4 link Description: RB, Help: 工作台, Value: reelbenchai.com/v1/dashboard
+			5 link Description: 首页, Value: reelbenchai.com/v1/dashboard
+			6 link Description: 创意, Help: 创意市场, Value: reelbenchai.com/v1/creative-templates
+			7 link Description: 资产库, Value: reelbenchai.com/v1/asset-library
+			8 link Description: 设置, Value: reelbenchai.com/v1/settings
+			9 button (collapsed) 本 用户中心, Help: 账号：本机, Secondary Actions: Expand
+				10 text 本
+				11 text 用户中心
+		12 link Description: 工作台, Value: reelbenchai.com/v1/dashboard
+		13 text ›
+		14 text 资产库
+		15 text 用户级 · 全局
+		16 container
+			17 text 用户级  ·  跨项目复用 · ASSET LIBRARY
+			18 heading 资产库, Value: 1
+				19 text 资产库
+			20 text 角色、场景和道具保存在项目之外。可以独立浏览和管理；需要使用时，再选择要导入的项目。
+		21 container
+			22 text 导入目标 资产库本身不属于任何项目。这里的选择只决定点击“导入”时复制到哪个项目。
+			23 pop up button (collapsed, settable) Description: 选择资产导入项目, Value: 暂不选择项目, Secondary Actions: Expand
+				24 menu
+					25 (selected) 暂不选择项目
+					26 星与追光者 - 番茄红果
+		28 button 全部 0
+			29 text 全部 
+			30 text 0
+		31 button 角色 0
+			32 text 角色 
+			33 text 0
+		34 button 场景 0
+			35 text 场景 
+			36 text 0
+		37 button 道具 0
+			38 text 道具 
+			39 text 0
+		40 search text field (settable)
+		41 text 资产库还是空的
+		42 text 在任意小说项目的角色或美术页面点击“加入资产库”，这里会保存一份全局副本。
+		43 link Description: 返回工作台, Value: reelbenchai.com/v1/dashboard
+		44 text 预览
+		45 text 站上的演示程序，只读
+		46 button 获取工作台
+
+The focused UI element is 1 AXWebArea Reelbench · AI短视频制作工作台, URL: reelbenchai.com/v1/asset-library

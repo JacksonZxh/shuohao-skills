@@ -1,0 +1,91 @@
+Browser tab: 7, Title: "Reelbench · AI短视频制作工作台", URL: "https://reelbenchai.com/v1/p/4cbd73adcc15/settings".
+1 AXWebArea Reelbench · AI短视频制作工作台, URL: reelbenchai.com/v1/p/4cbd73adcc15/settings
+	2 container
+		3 link Description: RB, Help: 所有项目, Value: reelbenchai.com/v1/dashboard
+		4 link Description: 工作台, Help: 返回工作台, Value: reelbenchai.com/v1/dashboard
+		5 text ›
+		6 button 星与追光者 - 番茄红果
+			7 text 星与追光者 - 番茄红果
+			8 image
+		9 link Description: 资产库, Value: reelbenchai.com/v1/asset-library?project=4cbd73adcc15
+		10 link Description: 剧本, Value: reelbenchai.com/v1/p/4cbd73adcc15/script
+		11 link Description: 角色, Value: reelbenchai.com/v1/p/4cbd73adcc15/cast
+		12 link Description: 美术, Value: reelbenchai.com/v1/p/4cbd73adcc15/art
+		13 link Description: 分镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard
+		14 link Description: 概览, Value: reelbenchai.com/v1/p/4cbd73adcc15
+		15 link Description: 大纲, Value: reelbenchai.com/v1/p/4cbd73adcc15/outline
+		16 link Description: 变更, Value: reelbenchai.com/v1/p/4cbd73adcc15/history
+		17 link Description: 素材库, Value: reelbenchai.com/v1/p/4cbd73adcc15/library
+		18 link Description: 设置, Value: reelbenchai.com/v1/p/4cbd73adcc15/settings
+		19 text 设置 · SETTINGS
+		20 link Description: 画面比例, Value: reelbenchai.com/v1/p/4cbd73adcc15/settings#project-media
+		21 link Description: 用哪个模型, Value: reelbenchai.com/v1/p/4cbd73adcc15/settings#models
+		22 link Description: 角色图, Value: reelbenchai.com/v1/p/4cbd73adcc15/settings#character-refs
+		23 link Description: 美术图, Value: reelbenchai.com/v1/p/4cbd73adcc15/settings#art-refs
+		24 link Description: 整机设置 → 所有剧目共用, Value: reelbenchai.com/v1/settings
+		25 container
+			26 text 本剧目 · PROJECT
+			27 heading 项目设置, Value: 1
+				28 text 项目设置
+			29 link Description: 整机设置 →, Value: reelbenchai.com/v1/settings
+			30 text 只影响这一部剧。这里的每一项都是这部剧自己的一份，改全局设置或别的剧目都不会动它。
+		31 container project-media
+			32 heading 当前项目 · 画面比例, Value: 2
+				33 text 当前项目 · 画面比例
+			34 text 只影响当前项目“星与追光者 - 番茄红果”。图片和视频共用一个比例； 新任务入队时按这个比例出图、出视频。
+			35 text 图片与视频比例 
+			36 text 项目级
+			37 button 16:9 横屏 · 默认 已选择
+				38 text 16:9
+				39 text 横屏 · 默认
+				40 text 已选择
+			41 button 9:16 竖屏 选择
+				42 text 9:16
+				43 text 竖屏
+				44 text 选择
+			45 text 新任务入队时会固定这个比例；之后修改设置不会改变已经排队或已经生成的素材。
+		46 container models
+			47 heading 本剧目用哪个模型, Value: 2
+				48 text 本剧目用哪个模型
+			49 text 三类活各一个模型；这里的「出图」管分镜图，角色和美术的出图模型在下面两节各选各的。建剧目时从整机默认复制了一份， 之后就是这部剧自己的：改整机默认或别的剧目都不会影响它。可选的模型来自整机设置里接好的渠道。
+			50 text 文本
+			51 text 大纲 / 角色 / 美术 / 剧本 / 分镜的文字生成，以及提示词翻译
+			52 combo box (disabled, collapsed) Description: 文本模型, Value: 还没指定, Secondary Actions: Expand
+			53 text 出图
+			54 text 分镜图；新剧目的角色锚点、美术锚点也从这里取初始值
+			55 combo box (disabled, collapsed) Description: 出图模型, Value: 还没指定, Secondary Actions: Expand
+			56 text 出视频
+			57 text 分镜视频与整片合成
+			58 combo box (disabled, collapsed) Description: 出视频模型, Value: 还没指定, Secondary Actions: Expand
+			59 container
+				60 text 这是这一部剧自己的一份，改
+				61 link Description: 整机默认, Value: reelbenchai.com/v1/settings/models
+				62 text 或别的剧目都不会影响它。
+		63 container character-refs
+			64 heading 角色图, Value: 2
+				65 text 角色图
+			66 text 锚点是每个角色唯一照文字画的那张正面全身；大头照、侧面、背面、细节图都照着它改，用「派生图模型」，不选就跟锚点同一个。 只管角色，跟下面的美术图互不影响。「锚点出完先确认」角色和场景共用。
+			67 combo box (disabled, collapsed) Description: 锚点模型, Help: 角色的正面全身锚点用哪个模型出。只管角色，跟美术的模型互不影响, Value: 锚点模型 还没指定, Secondary Actions: Expand
+			68 combo box (collapsed) Description: 派生图模型, Help: 角色的大头照、侧面、背面、细节图用哪个模型出，不选就跟角色锚点用同一个。只管角色，跟美术的模型互不影响, Value: 派生图模型 同锚点模型, Secondary Actions: Expand
+				69 text 派生图模型
+				70 text 同锚点模型
+			71 container 打开后，锚点出完先停下来等你看过、点「确认锚点」，再出其余几张
+				72 checkbox (settable, integer) Description: 锚点出完先确认, Value: 0
+				73 text 锚点出完先确认
+		74 container art-refs
+			75 heading 美术图, Value: 2
+				76 text 美术图
+			77 text 场景的正面是锚点，道具设定图也用锚点模型；场景的俯视、背面、左侧、右侧照着正面改，用「派生图模型」。 只管美术，跟上面的角色图互不影响。
+			78 combo box (disabled, collapsed) Description: 锚点模型, Help: 场景正面（锚点）和道具设定图用哪个模型出。只管美术，跟角色的模型互不影响, Value: 锚点模型 还没指定, Secondary Actions: Expand
+			79 combo box (collapsed) Description: 派生图模型, Help: 场景的俯视、背面、左侧、右侧用哪个模型出，不选就跟美术锚点用同一个。只管美术，跟角色的模型互不影响, Value: 派生图模型 同锚点模型, Secondary Actions: Expand
+				80 text 派生图模型
+				81 text 同锚点模型
+		82 text 日志 0 KB
+		83 text · 图片 0 KB
+		84 text · 视频 0 KB
+		85 link Description: 清理, Value: reelbenchai.com/v1/logs
+		86 text 预览
+		87 text 站上的演示程序，只读
+		88 button 获取工作台
+
+The focused UI element is 1 AXWebArea Reelbench · AI短视频制作工作台, URL: reelbenchai.com/v1/p/4cbd73adcc15/settings

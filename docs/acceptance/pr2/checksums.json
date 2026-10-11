@@ -1,0 +1,18 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "variants/outline-dangling-reference.json": "7fa0479db02ca5fc0f9ea1c3221cae11524944221a9812278e9b10895af0e282",
+    "variants/cast-ambiguous-alias.json": "3fe153710fb787a49b0e2368a4cf37185ff0834e0ac2882d42888ace77377462",
+    "variants/cast-invalid-importance.json": "87119d5505d43ccfa3b2ab1896ea12e104586c43a49e30355bc2b9d4df234d2e",
+    "variants/cast-reordered.json": "7450a36cb132eb592102be88c5427278bc592836223e55454726be44af480f13",
+    "variants/cast-without-codes.json": "9b191b360eb34589370b0b1d0fb07bde20498fc47fb7d7bb10fbd88e0ce2f31e",
+    "variants/art-new-valid-then-invalid.json": "5be19e9984668c6665f2b5249327644cc7314d66f48ae190c41fc491e8d1360a",
+    "variants/cast-duplicate-code.json": "bdab94ad53acd7f9bf5726fc9fb426c24b3c312526484094dd92a1bcb9828291",
+    "variants/cast-edited.json": "10eb314db84f856e5d56afe852f4dc61bdacd63871cbcee23ba97544c351c703",
+    "variants/art-invalid-variant.json": "3d9b4c9ac0b6137beba0186337161ec072ebf827a814802eac62ab0af395bf56",
+    "variants/cast-name-conflict.json": "bd427e03f0445caf67c649961c02ecda22738128c9a31343788b2ae6183d36aa",
+    "baseline/cast.json": "a29e63355dbf222dc82214b14768aeb072149f91743038fda9c65fadcb749438",
+    "baseline/outline.json": "f1cb356f5a61bd0e169eb6cacb86d1f299ed31f315beb45d82cce35aa44acd99",
+    "baseline/art.json": "df3169aac2fa060b37025dc194f61fe013480dd2faa6f3824fbbedca457456aa"
+  }
+}

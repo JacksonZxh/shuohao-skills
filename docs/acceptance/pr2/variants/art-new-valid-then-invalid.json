@@ -1,0 +1,198 @@
+{
+  "source": "停钟档案",
+  "lang": "zh",
+  "dynasty": "当代中国",
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "档案库房",
+      "primary": true,
+      "summary": "设计意图：用可辨识的工作空间承载记录核对。",
+      "anchors": [
+        {
+          "name": "蓝色铁架",
+          "desc": "固定位置和外观，跨集保持一致。"
+        },
+        {
+          "name": "方格地砖",
+          "desc": "固定位置和外观，跨集保持一致。"
+        },
+        {
+          "name": "壁挂停钟",
+          "desc": "固定位置和外观，跨集保持一致。"
+        }
+      ],
+      "lighting": [
+        {
+          "state": "夜间",
+          "prompt": "Empty contemporary Chinese municipal archive interior, blue metal shelves, square floor tiles, wall clock, no people. Cool overhead light and soft window reflections."
+        }
+      ],
+      "image": {
+        "prompt": "Empty contemporary Chinese municipal archive interior, blue metal shelves, square floor tiles, wall clock, no people.",
+        "negativePrompt": "people, human figure, faces, text, watermark",
+        "sheet": "Empty contemporary Chinese municipal archive interior, blue metal shelves, square floor tiles, wall clock, no people. Environment model sheet, master view with detail strip, clean intact surfaces with no arbitrary dirt or damage.",
+        "tags": [
+          "contemporary",
+          "metal",
+          "cool light"
+        ]
+      },
+      "usage": {
+        "episodes": [
+          1,
+          2,
+          3
+        ],
+        "beats": []
+      }
+    },
+    {
+      "id": "S02",
+      "name": "校时室",
+      "primary": true,
+      "summary": "设计意图：用可辨识的工作空间承载记录核对。",
+      "anchors": [
+        {
+          "name": "绿色工作台",
+          "desc": "固定位置和外观，跨集保持一致。"
+        },
+        {
+          "name": "圆形窗框",
+          "desc": "固定位置和外观，跨集保持一致。"
+        },
+        {
+          "name": "带刻度墙板",
+          "desc": "固定位置和外观，跨集保持一致。"
+        }
+      ],
+      "lighting": [
+        {
+          "state": "夜间",
+          "prompt": "Empty contemporary Chinese municipal archive interior, green workbench, round window frame, calibration board, no people. Cool overhead light and soft window reflections."
+        }
+      ],
+      "image": {
+        "prompt": "Empty contemporary Chinese municipal archive interior, green workbench, round window frame, calibration board, no people.",
+        "negativePrompt": "people, human figure, faces, text, watermark",
+        "sheet": "Empty contemporary Chinese municipal archive interior, green workbench, round window frame, calibration board, no people. Environment model sheet, master view with detail strip, clean intact surfaces with no arbitrary dirt or damage.",
+        "tags": [
+          "contemporary",
+          "metal",
+          "cool light"
+        ]
+      },
+      "usage": {
+        "episodes": [
+          1,
+          2
+        ],
+        "beats": []
+      }
+    },
+    {
+      "id": "S03",
+      "name": "备用库房",
+      "primary": true,
+      "summary": "设计意图：用可辨识的工作空间承载记录核对。",
+      "anchors": [
+        {
+          "name": "蓝色铁架",
+          "desc": "固定位置和外观，跨集保持一致。"
+        },
+        {
+          "name": "方格地砖",
+          "desc": "固定位置和外观，跨集保持一致。"
+        },
+        {
+          "name": "壁挂停钟",
+          "desc": "固定位置和外观，跨集保持一致。"
+        }
+      ],
+      "lighting": [
+        {
+          "state": "夜间",
+          "prompt": "Empty contemporary Chinese municipal archive interior, blue metal shelves, square floor tiles, wall clock, no people. Cool overhead light and soft window reflections."
+        }
+      ],
+      "image": {
+        "prompt": "Empty contemporary Chinese municipal archive interior, blue metal shelves, square floor tiles, wall clock, no people.",
+        "negativePrompt": "people, human figure, faces, text, watermark",
+        "sheet": "Empty contemporary Chinese municipal archive interior, blue metal shelves, square floor tiles, wall clock, no people. Environment model sheet, master view with detail strip, clean intact surfaces with no arbitrary dirt or damage.",
+        "tags": [
+          "contemporary",
+          "metal",
+          "cool light"
+        ]
+      },
+      "usage": {
+        "episodes": [
+          1,
+          2,
+          3
+        ],
+        "beats": []
+      }
+    }
+  ],
+  "props": [
+    {
+      "id": "P01",
+      "name": "缺角铜签",
+      "scale": "手持级",
+      "summary": "戏剧功能：把十年前的交接记录关联到校时员。",
+      "anchors": [
+        {
+          "name": "左上缺角",
+          "desc": "形状与位置固定。"
+        },
+        {
+          "name": "三道刻痕",
+          "desc": "形状与位置固定。"
+        },
+        {
+          "name": "圆孔",
+          "desc": "形状与位置固定。"
+        }
+      ],
+      "states": [
+        {
+          "state": "完整呈现",
+          "prompt": "A small copper token at handheld scale, chipped upper left corner, three engraved marks, circular hole, pure white background, no people or hands."
+        }
+      ],
+      "relatedScenes": [
+        "S99"
+      ],
+      "carriedBy": [
+        "小苏"
+      ],
+      "image": {
+        "prompt": "A small copper token at handheld scale, chipped corner, three marks and circular hole, pure white background, no people or hands.",
+        "negativePrompt": "people, hands, fingers, human figure, text, watermark",
+        "sheet": "Copper token at handheld scale on pure white background. Front back and edge views with fixed chipped corner and engraving. Clean intact surfaces apart from the specified chipped corner.",
+        "tags": [
+          "copper",
+          "engraved",
+          "small object"
+        ]
+      },
+      "usage": {
+        "episodes": [
+          1,
+          2,
+          3
+        ],
+        "beats": [
+          "责任揭露"
+        ]
+      },
+      "x_acceptance": {
+        "optional": null
+      }
+    }
+  ],
+  "x_acceptance": {
+    "revisionTag": "art-original"
+  }
+}
