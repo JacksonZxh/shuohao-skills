@@ -4,6 +4,8 @@ import { handleHealth } from "./health";
 import { jsonError } from "./http";
 import { handlePrivateMedia } from "./media";
 
+import { handleProjectApi } from "./platform/http";
+
 const PATH_QUERY_KEYS = ["path", "file", "filepath", "dir", "localpath"];
 
 export default {
@@ -26,7 +28,7 @@ export async function handleApi(request: Request, url: URL, env: Env): Promise<R
     JSON.stringify({
       message: "api request",
       method: request.method,
-      path: url.pathname,
+      path: url.pathname.startsWith("/api/projects") ? "/api/projects/*" : url.pathname,
       appEnv: env.APP_ENV,
     }),
   );
@@ -51,6 +53,10 @@ export async function handleApi(request: Request, url: URL, env: Env): Promise<R
       return new Response(null, { status: response.status, headers: response.headers });
     }
     return response;
+  }
+
+  if (url.pathname === "/api/projects" || url.pathname.startsWith("/api/projects/")) {
+    return handleProjectApi(request, env);
   }
 
   if (url.pathname === "/api/media" || url.pathname.startsWith("/api/media/")) {

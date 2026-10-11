@@ -6,6 +6,7 @@ import { parseJsonc } from "./jsonc.mjs";
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SECRET_VAR_NAMES = new Set([
   "EXECUTOR_TOKEN",
+  "WORKBENCH_TOKEN",
   "AI_GATEWAY_TOKEN",
   "API_KEY",
   "SECRET",

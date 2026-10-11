@@ -31,7 +31,7 @@ describe("健康检查", () => {
     expect(body.ok).toBe(true);
     expect(body.env).toBe("local");
     expect(isEpochMs(body.time)).toBe(true);
-    expect(body.checks.d1).toMatchObject({ ok: true, schema: "0001_initial" });
+    expect(body.checks.d1).toMatchObject({ ok: true, schema: "0002_platform_imports" });
     expect(body.checks.r2).toMatchObject({ ok: true, public: false, read: "private" });
     expect(body.resources.databaseName).toBe("shuohao-workbench-local");
     expect(body.resources.bucketName).toBe("shuohao-workbench-local");

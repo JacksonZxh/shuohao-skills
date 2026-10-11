@@ -1,4 +1,4 @@
-import { mkdtemp, rm } from "node:fs/promises";
+import { mkdtemp, rm, readdir } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { spawn } from "node:child_process";
@@ -94,10 +94,11 @@ try {
     persistTo,
     `SELECT name, created_at FROM projects WHERE id = '${projectId}'`,
   );
+  const expectedMigrations = (await readdir(path.join(root, "migrations"))).filter(file => file.endsWith(".sql")).sort();
   const migrationRows = rowsOf(migrations);
   const projectRows = rowsOf(projects);
-  if (migrationRows.length !== 1) {
-    throw new Error(`重复迁移后记录数应为 1，实际 ${migrationRows.length}\n第二次输出：\n${second}`);
+  if (JSON.stringify(migrationRows.map(row => row.name).sort()) !== JSON.stringify(expectedMigrations)) {
+    throw new Error(`重复迁移后记录应为 ${expectedMigrations.join(", ")}，实际 ${migrationRows.length}\n第二次输出：\n${second}`);
   }
   if (projectRows.length !== 1 || projectRows[0].name !== "migration-sentinel") {
     throw new Error(`哨兵项目在第二次迁移后丢失：${JSON.stringify(projectRows)}\n${second}`);
@@ -105,7 +106,7 @@ try {
   if (Number(projectRows[0].created_at) !== 1700000000000) {
     throw new Error(`时间字段不是预期的 epoch 毫秒：${JSON.stringify(projectRows[0])}`);
   }
-  console.log("空库迁移、进程重启后再迁移：通过。迁移记录 1 条，哨兵项目仍在。");
+  console.log("空库迁移、进程重启后再迁移：通过。迁移记录与文件列表一致，哨兵项目仍在。");
   console.log(second.trim().split("\n").slice(-8).join("\n"));
 } finally {
   await rm(persistTo, { recursive: true, force: true });
