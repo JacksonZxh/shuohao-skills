@@ -47,16 +47,16 @@ async function checkD1(db: D1Database): Promise<{ ok: boolean; schema: string | 
   try {
     const row = await db
       .prepare("SELECT value FROM schema_meta WHERE key = ?")
-      .bind("id_format")
+      .bind("migration")
       .first<{ value: string }>();
-    if (row?.value !== "uuid_v4") {
+    if (row?.value !== "0002_platform_imports") {
       return {
         ok: false,
         schema: null,
         detail: "数据库里没有初始迁移标记。请先在本地执行迁移。",
       };
     }
-    return { ok: true, schema: "0001_initial" };
+    return { ok: true, schema: "0002_platform_imports" };
   } catch (error) {
     console.error(
       JSON.stringify({

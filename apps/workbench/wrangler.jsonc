@@ -27,11 +27,12 @@
     "run_worker_first": ["/api/*"]
   },
   "secrets": {
-    "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN"]
+    "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN", "WORKBENCH_TOKEN"]
   },
   "vars": {
     "APP_ENV": "local",
     "MEDIA_PUBLIC": "false",
+    "D1_QUERY_BUDGET": "50",
     "REMOTE_RESOURCES": "unprovisioned",
     "D1_DATABASE_NAME": "shuohao-workbench-local",
     "D1_DATABASE_ID": "00000000-0000-4000-8000-0000000000a1",
@@ -72,11 +73,12 @@
         "run_worker_first": ["/api/*"]
       },
       "secrets": {
-        "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN"]
+        "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN", "WORKBENCH_TOKEN"]
       },
       "vars": {
         "APP_ENV": "preview",
         "MEDIA_PUBLIC": "false",
+    "D1_QUERY_BUDGET": "50",
         "REMOTE_RESOURCES": "unprovisioned",
         "D1_DATABASE_NAME": "shuohao-workbench-preview",
         "D1_DATABASE_ID": "00000000-0000-4000-8000-0000000000a2",
@@ -117,11 +119,12 @@
         "run_worker_first": ["/api/*"]
       },
       "secrets": {
-        "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN"]
+        "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN", "WORKBENCH_TOKEN"]
       },
       "vars": {
         "APP_ENV": "production",
         "MEDIA_PUBLIC": "false",
+    "D1_QUERY_BUDGET": "50",
         "REMOTE_RESOURCES": "unprovisioned",
         "D1_DATABASE_NAME": "shuohao-workbench-production",
         "D1_DATABASE_ID": "00000000-0000-4000-8000-0000000000a3",

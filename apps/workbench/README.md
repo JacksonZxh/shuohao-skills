@@ -1,6 +1,6 @@
-# 烁皓工作台（M1 PR1）
+# 烁皓工作台（M1 / F1）
 
-Workers 静态壳、健康检查、D1 初始迁移、R2 私有读取边界。这是路线图 [#5](https://github.com/JacksonZxh/shuohao-skills/issues/5) 里 M1（[#6](https://github.com/JacksonZxh/shuohao-skills/issues/6)）的第一段脚手架。
+Workers 静态壳、健康检查、D1 初始迁移、R2 私有读取边界。这是路线图 [#5](https://github.com/JacksonZxh/shuohao-skills/issues/5) 里 M1（[#6](https://github.com/JacksonZxh/shuohao-skills/issues/6)）的基础平台。新增F1契约、操作者鉴权、项目接口、导入提交和原文恢复，详见[平台契约](docs/api.md)。
 
 六个 skill 不在这个目录里，也不被这个应用 import。skill 仍然可以单独拷走。
 
@@ -8,7 +8,7 @@ Workers 静态壳、健康检查、D1 初始迁移、R2 私有读取边界。这
 
 这次没有做下面这些事，健康检查也会照实返回：
 
-- 文稿导入与导出（outline、cast、art、script、storyboard、character-refs）
+- 六类业务适配器与导出尚未接入；平台支持注入outline/cast/art规划器，实际Worker导入入口在接入前返回501
 - AI Gateway 的真实调用。配置字段可以留空。填了也不代表已经连通，状态保持未验证
 - 本机执行器。只有心跳鉴权占位：没有密钥或令牌不对会拒绝；令牌正确也只返回尚未实现，不写业务数据
 - 远程部署、远程迁移、真实素材上传
@@ -46,12 +46,14 @@ cp .dev.vars.example .dev.vars
 
 当前密钥名：
 
+- `WORKBENCH_TOKEN`：平台单操作者令牌，至少32字符且不含空白；与执行器令牌分开。项目/原文/对账接口先鉴权再读写；健康检查不依赖它。
+
 - `EXECUTOR_TOKEN`：本机执行器心跳。没有配置时，心跳接口直接拒绝
 - `AI_GATEWAY_TOKEN`：以后的网关令牌。这次不会读取它去发请求
 
 ## 本地迁移
 
-迁移文件在 `migrations/0001_initial.sql`。只针对本地模拟库：
+迁移目录包含0001初始结构和0002平台修订/约束。只针对本地模拟库：
 
 ```bash
 npm run migrate:local
@@ -67,7 +69,7 @@ npm run migrate:local
 npm run test:migrations
 ```
 
-它会在临时目录里：空库迁移 → 写入哨兵项目 → 新进程再迁移 → 确认迁移记录仍是 1 条、哨兵项目还在。
+它会在临时目录里：空库迁移 → 写入哨兵项目 → 新进程再迁移 → 确认迁移记录与SQL文件列表一致、哨兵项目还在。
 
 ## 本地启动
 
@@ -83,7 +85,9 @@ npm run dev
 - `GET /`：静态壳
 - `GET /api/health`：数据库、私有桶、未部署、尚未实现的能力
 - `GET /api/media/...` 与 `GET /api/objects/...`：403，不返回对象内容
-- `POST /api/import`、`POST /api/gateway/...`：501
+- 平台项目创建/列表、快照、原文读取与对账：详见[HTTP契约](docs/api.md)，需要平台令牌
+- `POST /api/projects/{id}/imports`：适配器未接入时501；注入后的平台函数已经有真实D1/R2测试
+- `POST /api/import`、`POST /api/gateway/...`：旧占位入口501
 - `POST /api/executor/heartbeat`：鉴权占位
 
 健康检查不会列出桶内对象，也不会回显密钥。

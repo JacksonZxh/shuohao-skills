@@ -5,6 +5,8 @@ import { createId } from "../src/ids";
 
 const EXPECTED_TABLES = [
   "projects",
+  "import_commits",
+  "current_documents",
   "project_settings",
   "style_versions",
   "characters",
@@ -63,8 +65,8 @@ describe("初始迁移", () => {
     const row = await env.DB.prepare("SELECT name FROM projects WHERE id = ?")
       .bind(projectId)
       .first<{ name: string }>();
-    expect(before?.n).toBe(1);
-    expect(after?.n).toBe(1);
+    expect(before?.n).toBe(2);
+    expect(after?.n).toBe(2);
     expect(row?.name).toBe("reapply");
   });
 

@@ -5,3 +5,6 @@
 
 EXECUTOR_TOKEN=
 AI_GATEWAY_TOKEN=
+
+# 平台操作者令牌，至少32字符；与执行器令牌分开。
+WORKBENCH_TOKEN=
