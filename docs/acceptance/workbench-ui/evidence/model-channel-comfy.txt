@@ -1,0 +1,105 @@
+Browser tab: 7, Title: "设置 · Reelbench", URL: "https://reelbenchai.com/v1/settings/models".
+1 AXWebArea 设置 · Reelbench, URL: reelbenchai.com/v1/settings/models
+	2 container
+		3 link Description: 工作台, Value: reelbenchai.com/v1/dashboard
+		4 text ›
+		5 link Description: 设置, Value: reelbenchai.com/v1/settings
+		6 text ›
+		7 text 模型与分配
+		8 container 工作台
+			9 link Description: RB, Help: 工作台, Value: reelbenchai.com/v1/dashboard
+			10 link Description: 首页, Value: reelbenchai.com/v1/dashboard
+			11 link Description: 创意, Help: 创意市场, Value: reelbenchai.com/v1/creative-templates
+			12 link Description: 资产库, Value: reelbenchai.com/v1/asset-library
+			13 link Description: 设置, Value: reelbenchai.com/v1/settings
+			14 button (collapsed) 本 用户中心, Help: 账号：本机, Secondary Actions: Expand
+				15 text 本
+				16 text 用户中心
+		17 container 设置分区
+			18 text 设置
+			19 link Description: 总览, Value: reelbenchai.com/v1/settings
+			20 text 生成
+			21 link Description: 模型与分配, Value: reelbenchai.com/v1/settings/models
+			22 link Description: ComfyUI, Value: reelbenchai.com/v1/settings/comfyui
+			23 link Description: 画风, Value: reelbenchai.com/v1/settings/styles
+			24 text 运行
+			25 link Description: 队列与提示词, Value: reelbenchai.com/v1/settings/generation
+			26 link Description: 存储目录, Value: reelbenchai.com/v1/settings/storage
+			27 text 这台机器
+			28 link Description: 本机环境, Value: reelbenchai.com/v1/settings/env
+			29 link Description: 内容更新, Value: reelbenchai.com/v1/settings/updates
+			30 link Description: 模型试运行, Value: reelbenchai.com/v1/settings/diagnostics
+			31 text 更多
+			32 link Description: 系统提示词, Value: reelbenchai.com/v1/system-prompts
+			33 link Description: 调用日志, Value: reelbenchai.com/v1/logs
+		34 container models
+			35 container
+				36 text 生成 · MODELS
+				37 heading 模型与分配, Value: 1
+					38 text 模型与分配
+				39 text 先定每类活用哪个模型；模型来自下面接入的渠道。单个剧目可以在自己的设置里改掉其中任意一样。
+			40 heading 哪类活用哪个模型, Value: 3
+				41 text 哪类活用哪个模型
+			42 text 三样都要指定：所有文字生成走「文本」，所有出图走「出图」，所有出视频走「出视频」。出图另有一个「备选」，给角色的派生图用。 新建剧目时复制这里的选择，之后每个剧目在它自己的设置里各改各的。
+			43 text 还有 文本、出图、出视频 没指定——这几类活现在跑不起来。
+			44 container
+				45 text 文本
+				46 text 大纲 / 角色 / 美术 / 剧本 / 分镜的文字生成，以及提示词翻译
+				47 text 还没指定默认 还没有可用的文本模型。到下面的渠道里打开「启用」，开着的才会出现在这里。
+			48 container
+				49 text 出图
+				50 text 分镜图；新剧目的角色锚点、美术锚点也从这里取初始值
+				51 text 还没指定默认
+				52 text 「备选」给角色的派生图用：锚点用默认模型画，大头照、侧面、背面默认用备选。剧目里可以各自改。
+				53 text 还没有可用的出图模型。到下面的渠道里打开「启用」，开着的才会出现在这里。
+			54 container
+				55 text 出视频
+				56 text 分镜视频与整片合成
+				57 text 还没指定默认 还没有可用的出视频模型。到下面的渠道里打开「启用」，开着的才会出现在这里。
+			58 heading 接入的渠道, Value: 3
+				59 text 接入的渠道
+			60 button + 新增渠道
+			61 text 一个渠道是一个上游：地址和凭据在这里填一次，它上面有几个模型是下一步的事。
+		62 text 预览
+		63 text 站上的演示程序，只读
+		64 button 获取工作台
+	65 container 接一个新的上游, ID: channel-form
+		66 container
+			67 text 新增渠道
+			68 heading 接一个新的上游, Value: 3, ID: channel-form-title
+				69 text 接一个新的上游
+			70 button 关闭
+		71 container
+			72 text 接入方式
+			73 pop up button (collapsed, settable) 接入方式 出图与出视频跑在同一台机器上。地址可以是本机、局域网里的另一台，或者租来的实例。, Value: 自部署 ComfyUI, Secondary Actions: Expand
+				74 menu
+					75 本机 codex
+					76 OpenAI 兼容 / 中转站
+					77 Anthropic 官方
+					78 (selected) 自部署 ComfyUI
+			96 text 出图与出视频跑在同一台机器上。地址可以是本机、局域网里的另一台，或者租来的实例。
+		80 container
+			81 text 名字
+			82 text field (settable) 名字
+		83 container
+			84 text 地址
+			85 text field (settable) 地址 例：http://192.168.1.20:8188 或 http://1.2.3.4:40283（host:port，不带路径）
+			97 text 例：http://192.168.1.20:8188 或 http://1.2.3.4:40283（host:port，不带路径）
+		98 container
+			99 text Basic Auth 用户名
+			100 text field (settable) Basic Auth 用户名
+		101 container
+			102 text Basic Auth 密码  留空不改动
+			103 text field (settable) Basic Auth 密码 留空不改动
+		104 container
+			105 text 备用隧道地址  同一台机器的第二条路
+			106 text field (settable) 备用隧道地址 同一台机器的第二条路 快速隧道的主机名会被回收；连不上先回来核对它。
+			107 text 快速隧道的主机名会被回收；连不上先回来核对它。
+		108 container
+			109 checkbox (settable, integer) Description: 优先走隧道, Value: 0
+			110 text 优先走隧道
+		93 container
+			94 button 取消
+			95 button 保存渠道
+
+The focused UI element is 60 button + 新增渠道

@@ -1,0 +1,82 @@
+Browser tab: 7, Title: "设置 · Reelbench", URL: "https://reelbenchai.com/v1/settings/comfyui".
+1 AXWebArea 设置 · Reelbench, URL: reelbenchai.com/v1/settings/comfyui
+	2 container
+		3 link Description: 工作台, Value: reelbenchai.com/v1/dashboard
+		4 text ›
+		5 link Description: 设置, Value: reelbenchai.com/v1/settings
+		6 text ›
+		7 text ComfyUI
+		8 container 工作台
+			9 link Description: RB, Help: 工作台, Value: reelbenchai.com/v1/dashboard
+			10 link Description: 首页, Value: reelbenchai.com/v1/dashboard
+			11 link Description: 创意, Help: 创意市场, Value: reelbenchai.com/v1/creative-templates
+			12 link Description: 资产库, Value: reelbenchai.com/v1/asset-library
+			13 link Description: 设置, Value: reelbenchai.com/v1/settings
+			14 button (collapsed) 本 用户中心, Help: 账号：本机, Secondary Actions: Expand
+				15 text 本
+				16 text 用户中心
+		17 container 设置分区
+			18 text 设置
+			19 link Description: 总览, Value: reelbenchai.com/v1/settings
+			20 text 生成
+			21 link Description: 模型与分配, Value: reelbenchai.com/v1/settings/models
+			22 link Description: ComfyUI, Value: reelbenchai.com/v1/settings/comfyui
+			23 link Description: 画风, Value: reelbenchai.com/v1/settings/styles
+			24 text 运行
+			25 link Description: 队列与提示词, Value: reelbenchai.com/v1/settings/generation
+			26 link Description: 存储目录, Value: reelbenchai.com/v1/settings/storage
+			27 text 这台机器
+			28 link Description: 本机环境, Value: reelbenchai.com/v1/settings/env
+			29 link Description: 内容更新, Value: reelbenchai.com/v1/settings/updates
+			30 link Description: 模型试运行, Value: reelbenchai.com/v1/settings/diagnostics
+			31 text 更多
+			32 link Description: 系统提示词, Value: reelbenchai.com/v1/system-prompts
+			33 link Description: 调用日志, Value: reelbenchai.com/v1/logs
+		34 container comfyui
+			35 container
+				36 text 生成 · COMFYUI
+				37 heading ComfyUI, Value: 1
+					38 text ComfyUI
+				39 text 视频选 ComfyUI 时走这台机器，图片选 Krea-2 或 Z-Image Turbo 时也走这里。租的实例（Vast.ai 这类）每次重启都换转发端口——「昨天还好好的」先回来核对端口。
+				40 button 测试连接
+				41 button (disabled) 保存
+			42 container
+				43 heading 连接, Value: 2
+					44 text 连接
+				45 text 地址
+				46 text field (settable) 地址 填到端口就行，末尾不要带 /system_stats、/prompt 这类接口路径。, Value: not-an-address
+				47 text 填到端口就行，末尾不要带 /system_stats、/prompt 这类接口路径。
+				48 text 备用地址 
+				49 text 可选
+				50 text field (settable) 备用地址 可选 Cloudflare 快速隧道这类。同一台机器的另一条路；主机名每次重启都会变。
+				51 text Cloudflare 快速隧道这类。同一台机器的另一条路；主机名每次重启都会变。
+				52 text 用户名
+				53 text field (settable) 用户名
+				54 text 密码 
+				55 text 当前 未设置
+				56 text field (settable) 密码 当前 未设置
+				57 checkbox (settable, integer) Description: 优先走备用地址（直连端口被墙掉时勾这个）, Value: 0
+			58 container
+				59 heading H3 生成默认值 这台卡上实测稳的组合，不确定就别动, Value: 2
+					60 text H3 生成默认值  这台卡上实测稳的组合，不确定就别动
+				61 text 分辨率 
+				62 text 百万像素
+				63 text field (settable) 分辨率 百万像素, Value: 0.6
+				64 text 帧率 
+				65 text fps
+				66 text field (settable) 帧率 fps, Value: 24
+				67 text 种子 
+				68 text 留空每次随机
+				69 text field (settable) 种子 留空每次随机
+				70 text 上下文长度
+				71 text field (settable) 上下文长度, Value: 5
+				72 text 音频上下文长度
+				73 text field (settable) 音频上下文长度, Value: 3
+				74 text 加速
+				75 checkbox (settable, integer) Description: turbo, Value: 1
+			80 text 地址要带上 http:// 或 https://
+		77 text 预览
+		78 text 站上的演示程序，只读
+		79 button 获取工作台
+
+The focused UI element is 46 text field (settable) 地址 填到端口就行，末尾不要带 /system_stats、/prompt 这类接口路径。, Value: not-an-address

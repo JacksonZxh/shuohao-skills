@@ -1,0 +1,150 @@
+{
+  "source": "停钟档案",
+  "lang": "zh",
+  "params": {
+    "episodes": 3,
+    "minutesPerEpisode": 2,
+    "genre": "现代悬疑",
+    "adaptMode": "忠实",
+    "preferences": []
+  },
+  "adaptation": {
+    "core": "档案馆员与退休校时员核对未来出库记录，揭出十年前的交接隐瞒。",
+    "keep": [
+      {
+        "what": "钟表与交接记录的时间差",
+        "why": "以可核对的事实推进悬疑",
+        "evidence": "钟表停在二十一点十七分"
+      }
+    ],
+    "cut": [],
+    "merge": [],
+    "risks": []
+  },
+  "characters": [
+    {
+      "id": "C01",
+      "name": "苏棠",
+      "role": "调查主角",
+      "tier": "lead",
+      "arc": "从相信系统记录到亲自核对事实",
+      "from": [
+        "原创"
+      ]
+    },
+    {
+      "id": "C02",
+      "name": "顾衡",
+      "role": "隐瞒旧案的校时员",
+      "tier": "lead",
+      "arc": "从回避责任到公开原始记录",
+      "from": [
+        "原创"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "档案库房",
+      "primary": true
+    },
+    {
+      "id": "S02",
+      "name": "校时室",
+      "primary": true
+    }
+  ],
+  "props": [
+    {
+      "id": "P01",
+      "name": "缺角铜签",
+      "function": "关联旧交接记录",
+      "beatIds": [
+        "B02"
+      ]
+    }
+  ],
+  "beats": [
+    {
+      "id": "B01",
+      "type": "时间异样",
+      "weight": "minor",
+      "episode": 1,
+      "setup": "未来出库清单",
+      "payoff": "记录早于发生时间"
+    },
+    {
+      "id": "B02",
+      "type": "责任揭露",
+      "weight": "major",
+      "episode": 2,
+      "setup": "铜签与原始签名",
+      "payoff": "校时员承认漏验签名"
+    },
+    {
+      "id": "B03",
+      "type": "真相确认",
+      "weight": "minor",
+      "episode": 3,
+      "setup": "自动任务配置",
+      "payoff": "区分系统错误与人为旧案"
+    }
+  ],
+  "episodes": [
+    {
+      "ep": 1,
+      "synopsis": "苏棠发现未来出库记录，邀请顾衡复核，铜签引出旧案。",
+      "hook": "停摆时钟对应着一条尚未发生的出库记录。",
+      "suspense": "铜签为什么关联十年前的交接？",
+      "sceneIds": [
+        "S01",
+        "S02"
+      ],
+      "characterIds": [
+        "C01",
+        "C02"
+      ],
+      "propIds": [
+        "P01"
+      ],
+      "warnings": []
+    },
+    {
+      "ep": 2,
+      "synopsis": "两人核对铜签与签名，顾衡承认当年的核验遗漏。",
+      "hook": "同一时间的交接记录出现两种签名。",
+      "suspense": "未来记录与旧案是否由同一人修改？",
+      "sceneIds": [
+        "S01",
+        "S02"
+      ],
+      "characterIds": [
+        "C01",
+        "C02",
+        "C99"
+      ],
+      "propIds": [
+        "P01"
+      ],
+      "warnings": []
+    },
+    {
+      "ep": 3,
+      "synopsis": "苏棠定位自动任务的日期设置错误，顾衡提交旧案原始记录，两人完成交接。",
+      "hook": "未来记录的时间来自一个被误设的自动任务。",
+      "suspense": "原始记录提交后，旧案责任将由谁承担？",
+      "sceneIds": [
+        "S01"
+      ],
+      "characterIds": [
+        "C01",
+        "C02"
+      ],
+      "propIds": [
+        "P01"
+      ],
+      "warnings": []
+    }
+  ]
+}

@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "scope": "PR2 independent acceptance contract; not an implemented API runner",
+  "projects": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G"
+  ],
+  "baselineCounts": {
+    "episodes": 3,
+    "characters": 2,
+    "scenes": 2,
+    "props": 1
+  },
+  "cases": [
+    {
+      "id": "P2-01",
+      "title": "完整基线",
+      "setup": "新建隔离项目 A",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "baseline/outline.json",
+            "baseline/cast.json",
+            "baseline/art.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "大纲三集、角色两个、场景两个、道具一个。",
+        "C01/C02 在大纲和角色卡指向同一内部实体；内部 ID 是稳定 UUID，源码 C01 另存。",
+        "P01 的 carriedBy 原字符串小苏保留，并唯一解析到项目 A 的 C01；relatedScenes 指向 A 的 S01/S02。",
+        "tier 保持 lead/lead，importance 保持 protagonist/major，不自动同值化。",
+        "无图像、小说和模型调用被创建；输入 source 不用作全局身份键。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-02",
+      "title": "完全重复导入",
+      "setup": "完成 P2-01",
+      "operations": [
+        {
+          "action": "snapshot",
+          "name": "before"
+        },
+        {
+          "action": "import",
+          "files": [
+            "baseline/outline.json",
+            "baseline/cast.json",
+            "baseline/art.json"
+          ]
+        },
+        {
+          "action": "snapshot",
+          "name": "after"
+        }
+      ],
+      "expectedAssertions": [
+        "语义指纹相同，作为幂等成功或明确已存在返回。",
+        "实体数量、UUID、关联集合及当前版本不变；可以追加审计记录但不得重复业务实体。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-03",
+      "title": "内容变更不复制身份",
+      "setup": "完成 P2-01",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/cast-edited.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "指纹变化，但明确源代码 C01/C02 仍映射原 UUID，不创建新角色。",
+        "如果内容更新需显式确认，先返回冲突且保持当前数据，再走受支持的显式更新或新版本入口。",
+        "确认后 C01 oneLiner 精确等于变更值，C02 不变；历史导入原文不可被覆写。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-04",
+      "title": "列表排序不改变身份",
+      "setup": "完成 P2-01",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/cast-reordered.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "源数组顺序与展示排序可更新或显式冲突，但 C01/C02 UUID 不变。",
+        "关系不能按数组下标重新绑定。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-05",
+      "title": "重复角色码",
+      "setup": "完成 P2-01 并保存数据库业务快照",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/cast-duplicate-code.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "请求明确失败，报告文件与 JSON 路径或候选实体；不得 force 或猜测。",
+        "整单业务数据与激活版本不变，不留下已提交的合法前半段；失败审计可单独追加。",
+        "R2 若产生暂存原文，不得激活为当前版本，并纳入清理机制。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-06",
+      "title": "无效角色重要性",
+      "setup": "完成 P2-01 并保存数据库业务快照",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/cast-invalid-importance.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "请求明确失败，报告文件与 JSON 路径或候选实体；不得 force 或猜测。",
+        "整单业务数据与激活版本不变，不留下已提交的合法前半段；失败审计可单独追加。",
+        "R2 若产生暂存原文，不得激活为当前版本，并纳入清理机制。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-07",
+      "title": "悬空大纲引用",
+      "setup": "完成 P2-01 并保存数据库业务快照",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/outline-dangling-reference.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "请求明确失败，报告文件与 JSON 路径或候选实体；不得 force 或猜测。",
+        "整单业务数据与激活版本不变，不留下已提交的合法前半段；失败审计可单独追加。",
+        "R2 若产生暂存原文，不得激活为当前版本，并纳入清理机制。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-08",
+      "title": "悬空场景变体",
+      "setup": "完成 P2-01 并保存数据库业务快照",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/art-invalid-variant.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "请求明确失败，报告文件与 JSON 路径或候选实体；不得 force 或猜测。",
+        "整单业务数据与激活版本不变，不留下已提交的合法前半段；失败审计可单独追加。",
+        "R2 若产生暂存原文，不得激活为当前版本，并纳入清理机制。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-09",
+      "title": "合法新增与坏引用同包",
+      "setup": "完成 P2-01 并保存数据库业务快照",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/art-new-valid-then-invalid.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "请求明确失败，报告文件与 JSON 路径或候选实体；不得 force 或猜测。",
+        "整单业务数据与激活版本不变，不留下已提交的合法前半段；失败审计可单独追加。",
+        "R2 若产生暂存原文，不得激活为当前版本，并纳入清理机制。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-10",
+      "title": "重名身份冲突",
+      "setup": "完成 P2-01 并保存数据库业务快照",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/cast-name-conflict.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "请求明确失败，报告文件与 JSON 路径或候选实体；不得 force 或猜测。",
+        "整单业务数据与激活版本不变，不留下已提交的合法前半段；失败审计可单独追加。",
+        "R2 若产生暂存原文，不得激活为当前版本，并纳入清理机制。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-11",
+      "title": "别名歧义",
+      "setup": "新建隔离项目 C",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "baseline/outline.json",
+            "variants/cast-ambiguous-alias.json",
+            "baseline/art.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "小苏同时属于两张不同角色卡，是身份冲突；完整导入请求必须明确拒绝。",
+        "禁止选择第一张、合并两角色，或以 unresolved 为由激活冲突包。",
+        "业务实体、关联、激活版本整体不变；失败审计可增加，R2暂存不能激活。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-12",
+      "title": "独立角色先导入",
+      "setup": "新建隔离项目 B",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "baseline/cast.json"
+          ]
+        },
+        {
+          "action": "snapshot",
+          "name": "castFirst"
+        },
+        {
+          "action": "import",
+          "files": [
+            "baseline/outline.json",
+            "baseline/art.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "第一次角色导入成功，不要求先有大纲。",
+        "后补大纲按 C01/C02 唯一映射已有角色 UUID，不能重复创建或覆盖 importance。",
+        "第二次建立场景道具关系；B 的全部关系仍在 B。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-13",
+      "title": "无角色码的独立角色",
+      "setup": "新建隔离项目 D",
+      "operations": [
+        {
+          "action": "import",
+          "files": [
+            "variants/cast-without-codes.json"
+          ]
+        },
+        {
+          "action": "import",
+          "files": [
+            "baseline/outline.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "原技能允许角色码省略；初次导入生成稳定实体及源映射。",
+        "后补大纲只能通过唯一姓名/别名或显式映射复用 UUID；歧义返回候选/冲突，不模糊合并。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-14",
+      "title": "跨项目隔离",
+      "setup": "完成 P2-01 和 P2-12",
+      "operations": [
+        {
+          "action": "referenceAttempt",
+          "fromProject": "A",
+          "targetEntityProject": "B",
+          "relation": "prop.carriedBy"
+        }
+      ],
+      "expectedAssertions": [
+        "A 与 B 的显示码相同但 UUID 不同，不做全局 C01 查找。",
+        "跨项目引用请求被拒绝，外键/服务层约束确保没有关系被写入；不可依赖 UI 隐藏。",
+        "导出 A 不含 B 内容，项目查询不能返回 B 私有数据。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-15",
+      "title": "编辑后导出再校验",
+      "setup": "完成 P2-01",
+      "operations": [
+        {
+          "action": "edit",
+          "document": "cast",
+          "selector": {
+            "code": "C01"
+          },
+          "field": "oneLiner",
+          "value": "馆员改为先复核时间，再质疑签名。"
+        },
+        {
+          "action": "export",
+          "documents": [
+            "outline",
+            "cast",
+            "art"
+          ]
+        },
+        {
+          "action": "validate",
+          "context": [
+            "story.txt",
+            "exported-cast.json"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "导出内容从当前规范化数据重建，C01 oneLiner 包含新值；不得原样吐初次 raw JSON 冒充更新导出。",
+        "outline/cast/art 顶层、人物/道具嵌套 x_acceptance 全部语义保留，包括 false、0、null、中文和数组顺序；大纲和角色文档扩展不能互相覆盖。",
+        "源码显示码和 carriedBy 小苏按契约保留，不泄漏内部 UUID 到原技能字段。",
+        "三份导出分别通过当前技能 CLI；再导入新项目 E，角色/场景/道具与关联等价。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-16",
+      "title": "历史原文不可变",
+      "setup": "完成 P2-03 显式更新并记录前版本",
+      "operations": [
+        {
+          "action": "readVersion",
+          "version": "original"
+        },
+        {
+          "action": "readVersion",
+          "version": "current"
+        }
+      ],
+      "expectedAssertions": [
+        "原版本 raw 字节 SHA-256 与 checksums.json 对应原文件一致。",
+        "当前导出反映更新，原版本 raw 和历史字段不随当前编辑变化。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-17",
+      "title": "写入鉴权拒绝",
+      "setup": "隔离环境，保存 D1/R2 前快照",
+      "operations": [
+        {
+          "action": "importUnauthorized",
+          "files": [
+            "baseline/cast.json"
+          ],
+          "credentials": [
+            null,
+            "invalid-test-token"
+          ]
+        }
+      ],
+      "expectedAssertions": [
+        "无凭据及错误凭据分别拒绝；返回401/403，不能返回成功。",
+        "D1业务与审计、R2对象均零写入；先鉴权再读上传/保存原文。",
+        "错误响应与日志不泄漏真实令牌，匿名读取私有原文同样拒绝。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-18",
+      "title": "UTF-8 原文存储阈值",
+      "setup": "每个字节档使用隔离项目 F-262143/F-262144/F-262145，避免不同语义指纹更新策略干扰存储阈值验收",
+      "operations": [
+        {
+          "action": "generateUtf8PaddedJson",
+          "source": "baseline/cast.json",
+          "field": "x_acceptance.padding",
+          "paddingUnit": "汉",
+          "byteTargets": [
+            262143,
+            262144,
+            262145
+          ],
+          "finishWithAsciiPadding": true
+        },
+        {
+          "action": "importGenerated"
+        }
+      ],
+      "expectedAssertions": [
+        "按 UTF-8 原始文档字节计数，不按 JavaScript string.length 或汉字数量判断。",
+        "超过256KiB（262145字节）的 raw JSON 使用R2，D1只保存引用/哈希及规范化字段。",
+        "262143/262144可按阈值存入D1或更保守地使用R2，但总行大小守卫仍须生效；不能把阈值误称为D1官方上限。",
+        "三档语义导出保持padding完整，历史原字节哈希正确，未知字段不能截断。"
+      ],
+      "verificationLayer": "workbench"
+    },
+    {
+      "id": "P2-19",
+      "title": "R2 原文成功但D1失败恢复",
+      "setup": "隔离项目 G；注入D1 finalize失败",
+      "operations": [
+        {
+          "action": "stageImportRaw",
+          "files": [
+            "baseline/cast.json"
+          ],
+          "forceRawStorage": "r2"
+        },
+        {
+          "action": "injectFailure",
+          "step": "d1-finalize"
+        },
+        {
+          "action": "retryIdenticalImport"
+        },
+        {
+          "action": "reconcileStaging"
+        }
+      ],
+      "expectedAssertions": [
+        "失败期间没有当前版本被激活，没有部分角色/关系写入。",
+        "R2暂存存在可追踪状态；重试按内容哈希复用或幂等核验对象，不重复业务实体。",
+        "重试成功后仅一个当前版本；对象存在、字节哈希一致、引用正确。",
+        "无法继续的暂存进入有明确保留期的清理流程；不能误删其他项目或历史有效原文。"
+      ],
+      "verificationLayer": "workbench"
+    }
+  ]
+}

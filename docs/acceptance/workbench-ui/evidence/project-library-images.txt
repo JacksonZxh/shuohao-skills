@@ -1,0 +1,102 @@
+Browser tab: 7, Title: "Reelbench · AI短视频制作工作台", URL: "https://reelbenchai.com/v1/p/4cbd73adcc15/library".
+1 AXWebArea Reelbench · AI短视频制作工作台, URL: reelbenchai.com/v1/p/4cbd73adcc15/library
+	2 container
+		3 link Description: RB, Help: 所有项目, Value: reelbenchai.com/v1/dashboard
+		4 link Description: 工作台, Help: 返回工作台, Value: reelbenchai.com/v1/dashboard
+		5 text ›
+		6 button 星与追光者 - 番茄红果
+			7 text 星与追光者 - 番茄红果
+			8 image
+		9 link Description: 资产库, Value: reelbenchai.com/v1/asset-library?project=4cbd73adcc15
+		10 link Description: 剧本, Value: reelbenchai.com/v1/p/4cbd73adcc15/script
+		11 link Description: 角色, Value: reelbenchai.com/v1/p/4cbd73adcc15/cast
+		12 link Description: 美术, Value: reelbenchai.com/v1/p/4cbd73adcc15/art
+		13 link Description: 分镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard
+		14 link Description: 概览, Value: reelbenchai.com/v1/p/4cbd73adcc15
+		15 link Description: 大纲, Value: reelbenchai.com/v1/p/4cbd73adcc15/outline
+		16 link Description: 变更, Value: reelbenchai.com/v1/p/4cbd73adcc15/history
+		17 link Description: 素材库, Value: reelbenchai.com/v1/p/4cbd73adcc15/library
+		18 link Description: 设置, Value: reelbenchai.com/v1/p/4cbd73adcc15/settings
+		19 text 素材库 · LIBRARY
+		20 text 素材
+		21 link Description: 图片 · 提示词 · 视频, Value: reelbenchai.com/v1/p/4cbd73adcc15/library
+		22 container
+			23 text 素材库 · LIBRARY
+			24 heading 素材库, Value: 1
+				25 text 素材库
+			26 text 这个项目使用和生成的素材都在这里：导入的小说、喂给模型的提示词、生成的图片和视频。
+		27 container
+			28 button 小说素材 1
+				29 text 小说素材 
+				30 text 1
+			31 button 图片素材 17
+				32 text 图片素材 
+				33 text 17
+			34 button 提示词素材 0
+				35 text 提示词素材 
+				36 text 0
+			37 button 视频素材 0
+				38 text 视频素材 
+				39 text 0
+		53 text 出图是内容寻址落盘的，重新生成不会覆盖旧图——所以这里同时看得到当前在用的和被替换掉的。
+		54 button (disabled) 一键生成全部图片
+		55 container
+			56 link Description: 苏落的手机 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/82/82ea7d6c2bc1a6ff6879b86c27df04677df13958c544bcf8878909898908cb1b.png
+			57 text 道具 苏落的手机 · 正面（锚点） P03 1373 KB · 82ea7d6c
+		58 container
+			59 link Description: 苏落的相机 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/98/98071b7edeb423f262a166098440bef62fc0b97e7f8eccc792a7b90f43c01379.png
+			60 text 道具 苏落的相机 · 正面（锚点） P01 2116 KB · 98071b7e
+		61 container
+			62 link Description: 苏落捧来的绿植 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/d9/d96c9e6680980ccc4f9c06627f9bef7d4f56264333767094ce6ea994fe0573ae.png
+			63 text 道具 苏落捧来的绿植 · 正面（锚点） P04 1680 KB · d96c9e66
+		64 container
+			65 link Description: 被下药的酒 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/16/16eb410c56122dd5524486528aec49d84b0252ccb1497740ad16080bae37f337.png
+			66 text 道具 被下药的酒 · 正面（锚点） P02 1239 KB · 16eb410c
+		67 container
+			68 link Description: 苏落的公寓及楼下 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/b9/b9363dfdfa38d090b7abc06ce7666134aced9f15ce8a06365cd2de5e2e3f9f80.png
+			69 text 场景 苏落的公寓及楼下 · 正面（锚点） S02 2369 KB · b9363dfd
+		70 container
+			71 link Description: 酒店·绯闻现场 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/1f/1fb39f2cecda14b182e2adfb0fd6679ad128efde756ba55eb815051b7fe8ef98.png
+			72 text 场景 酒店·绯闻现场 · 正面（锚点） S01 2453 KB · 1fb39f2c
+		73 container
+			74 link Description: 餐厅 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/58/58144645a8e18c75fd3aa5c0b9c99a47ca3490b371ddcb8f242dadf0f2cd2d66.png
+			75 text 场景 餐厅 · 正面（锚点） S04 2794 KB · 58144645
+		76 container
+			77 link Description: 周赟的工作室 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/be/be97e7ba74bb59eb80fb26ce4af821b61891345e0ed08d7d2f33db7490462408.png
+			78 text 场景 周赟的工作室 · 正面（锚点） S03 2442 KB · be97e7ba
+		79 container
+			80 link Description: 废弃工厂 · 正面（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/7b/7bd97209d7c858b6ca0b8e4095c08ac6a0fb0c7b4e3da7e50f267a1e1cc68fa0.png
+			81 text 场景 废弃工厂 · 正面（锚点） S05 3271 KB · 7bd97209
+		82 container
+			83 link Description: 警察 · 正面全身（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/7e/7e01458cf277b517d7ad334775131d62b20344ddb90656f647b069dbec488bac.png
+			84 text 角色 警察 · 正面全身（锚点） C08 1607 KB · 7e01458c
+		85 container
+			86 link Description: 林晚晴 · 正面全身（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/b4/b4945e45d27eb2f4f36fae3d5f931fcb9ee519afe29acad22ccef80f66aacc2d.png
+			87 text 角色 林晚晴 · 正面全身（锚点） C07 1591 KB · b4945e45
+		88 container
+			89 link Description: 主编 · 正面全身（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/41/41676881e7b88aed7849caa2ecf19d9354bde3f6eaddb566db2e0d442609b9d6.png
+			90 text 角色 主编 · 正面全身（锚点） C06 1698 KB · 41676881
+		91 container
+			92 link Description: 苏落 · 正面全身（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/24/24ad62bb6df51b8bcd169758955cd8a44d22cfb757209bd02501db74f78478fe.png
+			93 text 角色 苏落 · 正面全身（锚点） C01 1773 KB · 24ad62bb
+		94 container
+			95 link Description: 周赟 · 正面全身（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/6f/6f9805ebe55296de0f6620ca3118a0481162f68ca41e50d8f9df38ef32c47ea6.png
+			96 text 角色 周赟 · 正面全身（锚点） C02 1289 KB · 6f9805eb
+		97 container
+			98 link Description: 黎宇 · 正面全身（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/66/66e4d92e5ed438fcdc7dce712ffae8193991e26e277c9e929ef7c5b4dd408e83.png
+			99 text 角色 黎宇 · 正面全身（锚点） C04 1610 KB · 66e4d92e
+		100 container
+			101 link Description: 宋晓 · 正面全身（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/ae/ae76f77ca01a0d2ac380327bfebdc0df8e638a02bde67f03f2664643f33abf72.png
+			102 text 角色 宋晓 · 正面全身（锚点） C03 1638 KB · ae76f77c
+		103 container
+			104 link Description: 莉莉 · 正面全身（锚点）, Value: reelbenchai.com/demo-backend/media/projects/19/assets/ab/abb3f1180d787ac81833c1f709d676d31dbf6ad2e0db1feec7582a3a4623363d.png
+			105 text 角色 莉莉 · 正面全身（锚点） C05 1455 KB · abb3f118
+		46 text 日志 0 KB
+		47 text · 图片 0 KB
+		48 text · 视频 0 KB
+		49 link Description: 清理, Value: reelbenchai.com/v1/logs
+		50 text 预览
+		51 text 站上的演示程序，只读
+		52 button 获取工作台
+
+The focused UI element is 31 button 图片素材 17

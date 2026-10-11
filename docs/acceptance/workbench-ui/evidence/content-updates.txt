@@ -1,0 +1,63 @@
+Browser tab: 7, Title: "设置 · Reelbench", URL: "https://reelbenchai.com/v1/settings/updates".
+1 AXWebArea 设置 · Reelbench, URL: reelbenchai.com/v1/settings/updates
+	2 container
+		3 link Description: 工作台, Value: reelbenchai.com/v1/dashboard
+		4 text ›
+		5 link Description: 设置, Value: reelbenchai.com/v1/settings
+		6 text ›
+		7 text 内容更新
+		8 container 工作台
+			9 link Description: RB, Help: 工作台, Value: reelbenchai.com/v1/dashboard
+			10 link Description: 首页, Value: reelbenchai.com/v1/dashboard
+			11 link Description: 创意, Help: 创意市场, Value: reelbenchai.com/v1/creative-templates
+			12 link Description: 资产库, Value: reelbenchai.com/v1/asset-library
+			13 link Description: 设置, Value: reelbenchai.com/v1/settings
+			14 button (collapsed) 本 用户中心, Help: 账号：本机, Secondary Actions: Expand
+				15 text 本
+				16 text 用户中心
+		17 container 设置分区
+			18 text 设置
+			19 link Description: 总览, Value: reelbenchai.com/v1/settings
+			20 text 生成
+			21 link Description: 模型与分配, Value: reelbenchai.com/v1/settings/models
+			22 link Description: ComfyUI, Value: reelbenchai.com/v1/settings/comfyui
+			23 link Description: 画风, Value: reelbenchai.com/v1/settings/styles
+			24 text 运行
+			25 link Description: 队列与提示词, Value: reelbenchai.com/v1/settings/generation
+			26 link Description: 存储目录, Value: reelbenchai.com/v1/settings/storage
+			27 text 这台机器
+			28 link Description: 本机环境, Value: reelbenchai.com/v1/settings/env
+			29 link Description: 内容更新, Value: reelbenchai.com/v1/settings/updates
+			30 link Description: 模型试运行, Value: reelbenchai.com/v1/settings/diagnostics
+			31 text 更多
+			32 link Description: 系统提示词, Value: reelbenchai.com/v1/system-prompts
+			33 link Description: 调用日志, Value: reelbenchai.com/v1/logs
+		34 container updates
+			35 container
+				36 text 这台机器 · UPDATES
+				37 heading 内容更新, Value: 1
+					38 text 内容更新
+				39 text 提示词库、画风这类变得快的内容，从站点拉内容包，验过签名就生效，不用重新下载程序。程序本身有新版本时在
+				40 link Description: 本机环境, Value: reelbenchai.com/v1/settings/env
+				41 text 里提示。
+			42 container
+				43 heading 更新源, Value: 2
+					44 text 更新源
+				45 text 站点地址 
+				46 text 没有
+				47 text field (settable) 站点地址 没有 新版本从这里问。这份程序没有带站点地址，填你下载它的那个站点。
+				48 text 新版本从这里问。这份程序没有带站点地址，填你下载它的那个站点。
+				49 text 验签公钥  没有
+				50 text entry area (settable)
+				51 text 只认这把公钥签过的内容包；签名对不上的一律不用。
+				52 button 保存
+			53 container
+				54 heading 内容, Value: 2
+					55 text 内容
+				56 button 检查内容更新
+				57 text 内容包里是提示词库和内置画风，网页版界面每次打开时用你在网站上的账号取来交给本机程序，本机程序只认签名对的。本机改过的提示词、画风不会被覆盖，只会标出「出厂库有新版本」，新版本在它的历史里，点一下就能换过去。
+		58 text 预览
+		59 text 站上的演示程序，只读
+		60 button 获取工作台
+
+The focused UI element is 1 AXWebArea 设置 · Reelbench, URL: reelbenchai.com/v1/settings/updates

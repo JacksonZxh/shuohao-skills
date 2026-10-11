@@ -1,0 +1,141 @@
+{
+  "source": "停钟档案",
+  "lang": "zh",
+  "summary": "当代中国的档案馆即将搬迁。馆员发现一条未来出库记录，邀请退休校时员复核。两人被一枚铜签带回旧交接记录。",
+  "characters": [
+    {
+      "id": "C01",
+      "name": "苏棠",
+      "aliases": [
+        "小苏"
+      ],
+      "importance": "protagonist",
+      "oneLiner": "档案馆员，通过核对记录面对责任。",
+      "persona": {
+        "gender": "女",
+        "ageRange": "二十八岁",
+        "identity": "档案馆员",
+        "appearance": "外形保持原文的服装细节，职业轮廓清楚。",
+        "personality": [
+          "谨慎",
+          "执着",
+          "克制"
+        ],
+        "temperament": "说话前先核对事实。",
+        "motivation": "完成可信的档案交接。",
+        "arc": "从相信系统记录到亲自核对事实",
+        "relationships": [
+          {
+            "name": "顾衡",
+            "relation": "共同核对记录"
+          }
+        ],
+        "evidence": [
+          "苏棠袖口有一条蓝色缝线。"
+        ]
+      },
+      "image": {
+        "prompt": "A contemporary Chinese female archivist in an urban records office, twenty eight years old, narrow oval face, straight shoulder length black hair, navy cotton cardigan, blue sleeve stitching, alert brown eyes, slim upright posture.",
+        "promptLocal": "档案馆员的设定图，保持当代中国城市职业身份和原文服装特征。",
+        "negativePrompt": "duplicate person, text, watermark, distorted anatomy",
+        "tags": [
+          "contemporary",
+          "Chinese",
+          "cotton",
+          "neutral background"
+        ],
+        "sheet": "A contemporary Chinese female archivist in an urban records office, twenty eight years old, narrow oval face, straight shoulder length black hair, navy cotton cardigan, blue sleeve stitching, alert brown eyes, slim upright posture. Single character model sheet on ONE 16:9 landscape canvas. LEFT ZONE about 34 percent: bust portrait. RIGHT TOP: front side and back full body views sharing the same face. RIGHT BOTTOM: four isolated clothing details. Thin separators, natural proportions, extend details toward the right edge instead of compressing the body."
+      },
+      "voice": {
+        "timbre": "自然、清晰、克制。",
+        "pitch": "自然、清晰、克制。",
+        "pace": "自然、清晰、克制。",
+        "accent": "自然、清晰、克制。",
+        "emotion": "自然、清晰、克制。",
+        "referenceHint": "自然、清晰、克制。",
+        "prompt": "A young female alto with clear consonants, brisk analytical rhythm, light breath, restrained curiosity and precise endings."
+      },
+      "x_acceptance": {
+        "nested": [
+          1,
+          false,
+          null,
+          {
+            "value": "preserve"
+          }
+        ]
+      }
+    },
+    {
+      "id": "C02",
+      "name": "顾衡",
+      "aliases": [
+        "老顾",
+        "小苏"
+      ],
+      "importance": "major",
+      "oneLiner": "退休校时员，通过核对记录面对责任。",
+      "persona": {
+        "gender": "男",
+        "ageRange": "六十六岁",
+        "identity": "退休校时员",
+        "appearance": "外形保持原文的服装细节，职业轮廓清楚。",
+        "personality": [
+          "谨慎",
+          "执着",
+          "克制"
+        ],
+        "temperament": "说话前先核对事实。",
+        "motivation": "完成可信的档案交接。",
+        "arc": "从回避责任到公开原始记录",
+        "relationships": [
+          {
+            "name": "苏棠",
+            "relation": "共同核对记录"
+          }
+        ],
+        "evidence": [
+          "他的灰色工作服领口磨白了。"
+        ]
+      },
+      "image": {
+        "prompt": "An elderly Chinese male clock technician from a present day municipal archive, sixty six, broad weathered cheeks, silver cropped hair, heavy eyebrows, stooped shoulders, faded gray work jacket, worn collar, square spectacles and sturdy trousers.",
+        "promptLocal": "退休校时员的设定图，保持当代中国城市职业身份和原文服装特征。",
+        "negativePrompt": "duplicate person, text, watermark, distorted anatomy",
+        "tags": [
+          "contemporary",
+          "Chinese",
+          "cotton",
+          "neutral background"
+        ],
+        "sheet": "An elderly Chinese male clock technician from a present day municipal archive, sixty six, broad weathered cheeks, silver cropped hair, heavy eyebrows, stooped shoulders, faded gray work jacket, worn collar, square spectacles and sturdy trousers. Single character model sheet on ONE 16:9 landscape canvas. LEFT ZONE about 34 percent: bust portrait. RIGHT TOP: front side and back full body views sharing the same face. RIGHT BOTTOM: four isolated clothing details. Thin separators, natural proportions, extend details toward the right edge instead of compressing the body."
+      },
+      "voice": {
+        "timbre": "自然、清晰、克制。",
+        "pitch": "自然、清晰、克制。",
+        "pace": "自然、清晰、克制。",
+        "accent": "自然、清晰、克制。",
+        "emotion": "自然、清晰、克制。",
+        "referenceHint": "自然、清晰、克制。",
+        "prompt": "An older male bass baritone, gravelly resonance, deliberate pauses, heavy chest tone, low volume and weary measured cadence."
+      },
+      "x_acceptance": {
+        "nested": [
+          1,
+          false,
+          null,
+          {
+            "value": "preserve"
+          }
+        ]
+      }
+    }
+  ],
+  "x_acceptance": {
+    "note": "unknown top-level field",
+    "zero": 0,
+    "flag": false,
+    "null": null,
+    "unicode": "验收字段"
+  }
+}

@@ -1,0 +1,486 @@
+Browser tab: 7, Title: "Reelbench · AI短视频制作工作台", URL: "https://reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/1".
+1 AXWebArea Reelbench · AI短视频制作工作台, URL: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/1
+	2 container
+		3 link Description: RB, Help: 所有项目, Value: reelbenchai.com/v1/dashboard
+		4 link Description: 工作台, Help: 返回工作台, Value: reelbenchai.com/v1/dashboard
+		5 text ›
+		6 button 星与追光者 - 番茄红果
+			7 text 星与追光者 - 番茄红果
+			8 image
+		9 link Description: 资产库, Value: reelbenchai.com/v1/asset-library?project=4cbd73adcc15
+		10 link Description: 剧本, Value: reelbenchai.com/v1/p/4cbd73adcc15/script
+		11 link Description: 角色, Value: reelbenchai.com/v1/p/4cbd73adcc15/cast
+		12 link Description: 美术, Value: reelbenchai.com/v1/p/4cbd73adcc15/art
+		13 link Description: 分镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard
+		14 link Description: 概览, Value: reelbenchai.com/v1/p/4cbd73adcc15
+		15 link Description: 大纲, Value: reelbenchai.com/v1/p/4cbd73adcc15/outline
+		16 link Description: 变更, Value: reelbenchai.com/v1/p/4cbd73adcc15/history
+		17 link Description: 素材库, Value: reelbenchai.com/v1/p/4cbd73adcc15/library
+		18 link Description: 设置, Value: reelbenchai.com/v1/p/4cbd73adcc15/settings
+		19 text 分镜 · STORYBOARD
+		20 text 总表
+		21 link Description: 节奏与覆盖 463 未认领, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard
+		22 text 第 1 集
+		23 link Description: 本集总表 17 段, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1
+		24 link Description: E01-01 12.5s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/1
+		25 link Description: E01-02 12.5s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/2
+		26 link Description: E01-03 13.8s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/3
+		27 link Description: E01-04 13.6s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/4
+		28 link Description: E01-05 14.3s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/5
+		29 link Description: E01-06 15s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/6
+		30 link Description: E01-07 13.8s · 3镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/7
+		31 link Description: E01-08 15s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/8
+		32 link Description: E01-09 15s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/9
+		33 link Description: E01-10 14.5s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/10
+		34 link Description: E01-11 12.8s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/11
+		35 link Description: E01-12 15s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/12
+		36 link Description: E01-13 15s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/13
+		37 link Description: E01-14 13.1s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/14
+		38 link Description: E01-15 15s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/15
+		39 link Description: E01-16 15s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/16
+		40 link Description: E01-17 15s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/17
+		41 button + 新增 E01-18, Help: 在第 1 集末尾新增一段，接着上一段的段末走位
+		42 text 第 2 集
+		43 link Description: 本集总表 16 段, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2
+		44 link Description: E02-01 12.5s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/1
+		45 link Description: E02-02 14.8s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/2
+		46 link Description: E02-03 13.2s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/3
+		47 link Description: E02-04 14.5s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/4
+		48 link Description: E02-05 12.9s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/5
+		49 link Description: E02-06 13.3s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/6
+		50 link Description: E02-07 14.8s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/7
+		51 link Description: E02-08 14.1s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/8
+		52 link Description: E02-09 13s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/9
+		53 link Description: E02-10 14.3s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/10
+		54 link Description: E02-11 13.8s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/11
+		55 link Description: E02-12 12.2s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/12
+		56 link Description: E02-13 11.9s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/13
+		57 link Description: E02-14 13.5s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/14
+		58 link Description: E02-15 12.8s · 4镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/15
+		59 link Description: E02-16 12.5s · 5镜, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/2/16
+		60 button + 新增 E02-17, Help: 在第 2 集末尾新增一段，接着上一段的段末走位
+		61 container
+			62 link Description: 第 1 集, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1
+			63 text /
+			64 heading E01-01, Value: 1
+				65 text E01-01
+			66 text 1/17
+			67 link Description: 下一段, Help: 下一段 E01-02, Value: reelbenchai.com/v1/p/4cbd73adcc15/storyboard/1/2
+			68 link Description: 场次 1 · 酒店·绯闻现场, Value: reelbenchai.com/v1/p/4cbd73adcc15/art/scenes/S01
+			69 text 活动夜·暖金灯箱与闪光
+			70 text 12.5s / 15s · 4 镜
+		71 button (collapsed) 分镜说明, Secondary Actions: Expand
+			72 text 分镜说明
+		73 container
+			74 tab group 提示词按哪个视频服务的语法写
+				75 tab (selected, settable, boolean) H3, Help: 按 MiniMax 官方三种模式渲染：字段名、[Shot k] At、<Picture k> 固定英文，由镜头秒数和挂上的图派生, Value: 1
+				76 tab (selectable, settable, boolean) Seedance, Help: E1 还没有 Seedance 版本，点开可以生成一份, Value: 0
+				77 tab (selectable, settable, boolean) Wan, Help: E1 还没有 Wan 版本，点开可以生成一份, Value: 0
+			78 text T2VA · 纯文本
+			79 text English
+			80 button 发送稿, Help: 整条提示词，按发给视频模型的样子
+			81 text 本剧目模型
+			82 combo box (disabled, collapsed) Description: 文本, Help: 文本模型：重写分镜版本、翻译发送稿用它；只改本剧目, Value: 文本 还没指定, Secondary Actions: Expand
+			83 combo box (disabled, collapsed) Description: 分镜图, Help: 分镜图用哪个模型；只改本剧目，入队时固定下来, Value: 分镜图 还没指定, Secondary Actions: Expand
+			84 combo box (disabled, collapsed) Description: 视频, Help: 出片用哪个视频模型；只改本剧目，入队时固定下来, Value: 视频 还没指定, Secondary Actions: Expand
+			85 container 三维动漫渲染，半写实人物，接近真人而不落恐怖谷。
+				86 text 画风
+				87 button 3D仿真人 更换
+					88 text 3D仿真人
+					89 text 更换
+			90 text 画幅
+			91 container 画幅
+				92 button 16:9, Help: 横屏 1280×720
+				93 button 9:16, Help: 竖屏 720×1280
+		94 container
+			95 heading 开场 写锚点与朝向，不写「画面左 / 右」, Value: 3
+				96 text 开场  写锚点与朝向，不写「画面左 / 右」
+			97 text 开场走位 预览不显示提示词
+		98 heading 镜头, Value: 2
+			99 text 镜头
+		100 button 生成缺失分镜图, Help: 只把本段尚未出图的分镜加入统一任务队列
+		101 container cut-1
+			102 container
+				103 button (disabled) 1, Help: 还没有成片
+				104 text 0–2.5s
+				105 container
+					106 stepper (settable, float) Value: 2.5, ID: number-cut-1253-seconds
+					107 text 秒
+				108 combo box (collapsed) Description: 景别, Help: 改景别后 frame 里的景别短语要同步改，否则 size-phrase 门会失败, Value: 景别 全景 · wide, Secondary Actions: Expand
+					109 text 景别
+					110 text 全景 · wide
+				111 combo box (collapsed) Description: 运镜, Help: MiniMax H3 官方 20 个运镜词, Value: 运镜 跟拍 · Tracking Shot, Secondary Actions: Expand
+					112 text 运镜
+					113 text 跟拍 · Tracking Shot
+				114 combo box (collapsed) Description: 机位方位, Help: 机位在场景哪一侧、朝中心看——就是场景四视图的四格。分镜图按它取那一格，视频提示词按它写「从南向北看」。, Value: 机位方位 西 · west, Secondary Actions: Expand
+					115 text 机位方位
+					116 text 西 · west
+			117 container
+				118 button 生成分镜图
+				119 button Description: 上传, Help: 上传：用自己的图（选中这一镜后也可以 ⌘V 粘贴）
+				120 button Description: 发送稿, Help: 发送稿：发给出图模型的那份提示词
+					121 image
+				122 button 分镜图历史记录
+				123 button 酒店·绯闻现场 正面（锚点） 酒店·绯闻现场, Help: 场景「酒店·绯闻现场」· 正面（锚点） 上传第 1 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					124 image 酒店·绯闻现场 正面（锚点）
+					125 text 酒店·绯闻现场
+				126 button Description: 看大图：第 1 张, Help: 看大图：酒店·绯闻现场 · 正面（锚点）
+				127 button 苏落 正面全身（锚点） 苏落, Help: 角色「苏落」· 正面全身（锚点） 上传第 2 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					128 image 苏落 正面全身（锚点）
+					129 text 苏落
+				130 button Description: 看大图：第 2 张, Help: 看大图：苏落 · 正面全身（锚点）
+				131 button 苏落的相机 正面（锚点） 苏落的相机, Help: 道具「苏落的相机」· 正面（锚点） 上传第 3 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					132 image 苏落的相机 正面（锚点）
+					133 text 苏落的相机
+				134 button Description: 看大图：第 3 张, Help: 看大图：苏落的相机 · 正面（锚点）
+				135 button Description: 加素材, Help: 加一组素材
+					136 text +
+					137 text 加素材
+			138 container
+				139 text 视频提示词 [Shot 1] 预览不显示提示词
+			140 text 画面提示词
+			141 text 预览不显示提示词
+			142 text 说明
+			143 container
+				144 text — 双击改
+			145 container
+				146 text 节拍 1
+				147 button (disabled) 上移一镜
+					148 image
+				149 button 下移一镜
+					150 image
+				151 button 复制这一镜，放在它后面（不带分镜图）
+					152 image
+				153 button 删除这一镜
+					154 image
+				155 button 在第 1 镜后面加一镜
+					156 image
+		157 container cut-2
+			158 container
+				159 button (disabled) 2, Help: 还没有成片
+				160 text 2.5–5s
+				161 container
+					162 stepper (settable, float) Value: 2.5, ID: number-cut-1254-seconds
+					163 text 秒
+				164 combo box (collapsed) Description: 景别, Help: 改景别后 frame 里的景别短语要同步改，否则 size-phrase 门会失败, Value: 景别 中景 · medium, Secondary Actions: Expand
+					165 text 景别
+					166 text 中景 · medium
+				167 combo box (collapsed) Description: 运镜, Help: MiniMax H3 官方 20 个运镜词, Value: 运镜 固定 · Static Shot, Secondary Actions: Expand
+					168 text 运镜
+					169 text 固定 · Static Shot
+				170 combo box (collapsed) Description: 机位方位, Help: 机位在场景哪一侧、朝中心看——就是场景四视图的四格。分镜图按它取那一格，视频提示词按它写「从南向北看」。, Value: 机位方位 西 · west, Secondary Actions: Expand
+					171 text 机位方位
+					172 text 西 · west
+			173 container
+				174 button 生成分镜图
+				175 button Description: 上传, Help: 上传：用自己的图（选中这一镜后也可以 ⌘V 粘贴）
+				176 button Description: 发送稿, Help: 发送稿：发给出图模型的那份提示词
+					177 image
+				178 button 分镜图历史记录
+				179 button 酒店·绯闻现场 正面（锚点） 酒店·绯闻现场, Help: 场景「酒店·绯闻现场」· 正面（锚点） 上传第 1 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					180 image 酒店·绯闻现场 正面（锚点）
+					181 text 酒店·绯闻现场
+				182 button Description: 看大图：第 1 张, Help: 看大图：酒店·绯闻现场 · 正面（锚点）
+				183 button 苏落 正面全身（锚点） 苏落, Help: 角色「苏落」· 正面全身（锚点） 上传第 2 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					184 image 苏落 正面全身（锚点）
+					185 text 苏落
+				186 button Description: 看大图：第 2 张, Help: 看大图：苏落 · 正面全身（锚点）
+				187 button 苏落的相机 正面（锚点） 苏落的相机, Help: 道具「苏落的相机」· 正面（锚点） 上传第 3 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					188 image 苏落的相机 正面（锚点）
+					189 text 苏落的相机
+				190 button Description: 看大图：第 3 张, Help: 看大图：苏落的相机 · 正面（锚点）
+				191 button Description: 加素材, Help: 加一组素材
+					192 text +
+					193 text 加素材
+			194 container
+				195 text 视频提示词 [Shot 2] At 00:02.500, 预览不显示提示词
+			196 text 画面提示词
+			197 text 预览不显示提示词
+			198 text 说明
+			199 container
+				200 text — 双击改
+			201 container
+				202 text 节拍 2
+				203 button 上移一镜
+					204 image
+				205 button 下移一镜
+					206 image
+				207 button 复制这一镜，放在它后面（不带分镜图）
+					208 image
+				209 button 删除这一镜
+					210 image
+				211 button 在第 2 镜后面加一镜
+					212 image
+		213 container cut-3
+			214 container
+				215 button (disabled) 3, Help: 还没有成片
+				216 text 5–10s
+				217 container
+					218 stepper (settable, integer) Value: 5, ID: number-cut-1255-seconds
+					219 text 秒
+				220 combo box (collapsed) Description: 景别, Help: 改景别后 frame 里的景别短语要同步改，否则 size-phrase 门会失败, Value: 景别 中景 · medium, Secondary Actions: Expand
+					221 text 景别
+					222 text 中景 · medium
+				223 combo box (collapsed) Description: 运镜, Help: MiniMax H3 官方 20 个运镜词, Value: 运镜 跟拍 · Tracking Shot, Secondary Actions: Expand
+					224 text 运镜
+					225 text 跟拍 · Tracking Shot
+				226 combo box (collapsed) Description: 机位方位, Help: 机位在场景哪一侧、朝中心看——就是场景四视图的四格。分镜图按它取那一格，视频提示词按它写「从南向北看」。, Value: 机位方位 南 · south, Secondary Actions: Expand
+					227 text 机位方位
+					228 text 南 · south
+			229 container
+				230 button 生成分镜图
+				231 button Description: 上传, Help: 上传：用自己的图（选中这一镜后也可以 ⌘V 粘贴）
+				232 button Description: 发送稿, Help: 发送稿：发给出图模型的那份提示词
+					233 image
+				234 button 分镜图历史记录
+				235 button 酒店·绯闻现场 正面（锚点） 酒店·绯闻现场, Help: 场景「酒店·绯闻现场」· 正面（锚点） 上传第 1 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					236 image 酒店·绯闻现场 正面（锚点）
+					237 text 酒店·绯闻现场
+				238 button Description: 看大图：第 1 张, Help: 看大图：酒店·绯闻现场 · 正面（锚点）
+				239 button 苏落 正面全身（锚点） 苏落, Help: 角色「苏落」· 正面全身（锚点） 上传第 2 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					240 image 苏落 正面全身（锚点）
+					241 text 苏落
+				242 button Description: 看大图：第 2 张, Help: 看大图：苏落 · 正面全身（锚点）
+				243 button 苏落的相机 正面（锚点） 苏落的相机, Help: 道具「苏落的相机」· 正面（锚点） 上传第 3 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					244 image 苏落的相机 正面（锚点）
+					245 text 苏落的相机
+				246 button Description: 看大图：第 3 张, Help: 看大图：苏落的相机 · 正面（锚点）
+				247 button Description: 加素材, Help: 加一组素材
+					248 text +
+					249 text 加素材
+			250 container
+				251 text 视频提示词 [Shot 3] At 00:05.000, 预览不显示提示词
+			252 text 画面提示词
+			253 text 预览不显示提示词
+			254 text 说明
+			255 container
+				256 text — 双击改
+			257 container
+				258 text 节拍 3–4
+				259 button 上移一镜
+					260 image
+				261 button 下移一镜
+					262 image
+				263 button 复制这一镜，放在它后面（不带分镜图）
+					264 image
+				265 button 删除这一镜
+					266 image
+				267 button 在第 3 镜后面加一镜
+					268 image
+		269 container cut-4
+			270 container
+				271 button (disabled) 4, Help: 还没有成片
+				272 text 10–12.5s
+				273 container
+					274 stepper (settable, float) Value: 2.5, ID: number-cut-1256-seconds
+					275 text 秒
+				276 combo box (collapsed) Description: 景别, Help: 改景别后 frame 里的景别短语要同步改，否则 size-phrase 门会失败, Value: 景别 特写 · close, Secondary Actions: Expand
+					277 text 景别
+					278 text 特写 · close
+				279 combo box (collapsed) Description: 运镜, Help: MiniMax H3 官方 20 个运镜词, Value: 运镜 推 · Push In, Secondary Actions: Expand
+					280 text 运镜
+					281 text 推 · Push In
+				282 combo box (collapsed) Description: 机位方位, Help: 机位在场景哪一侧、朝中心看——就是场景四视图的四格。分镜图按它取那一格，视频提示词按它写「从南向北看」。, Value: 机位方位 南 · south, Secondary Actions: Expand
+					283 text 机位方位
+					284 text 南 · south
+			285 container
+				286 button 生成分镜图
+				287 button Description: 上传, Help: 上传：用自己的图（选中这一镜后也可以 ⌘V 粘贴）
+				288 button Description: 发送稿, Help: 发送稿：发给出图模型的那份提示词
+					289 image
+				290 button 分镜图历史记录
+				291 button 酒店·绯闻现场 正面（锚点） 酒店·绯闻现场, Help: 场景「酒店·绯闻现场」· 正面（锚点） 上传第 1 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					292 image 酒店·绯闻现场 正面（锚点）
+					293 text 酒店·绯闻现场
+				294 button Description: 看大图：第 1 张, Help: 看大图：酒店·绯闻现场 · 正面（锚点）
+				295 button 苏落 正面全身（锚点） 苏落, Help: 角色「苏落」· 正面全身（锚点） 上传第 2 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					296 image 苏落 正面全身（锚点）
+					297 text 苏落
+				298 button Description: 看大图：第 2 张, Help: 看大图：苏落 · 正面全身（锚点）
+				299 button 苏落的相机 正面（锚点） 苏落的相机, Help: 道具「苏落的相机」· 正面（锚点） 上传第 3 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+					300 image 苏落的相机 正面（锚点）
+					301 text 苏落的相机
+				302 button Description: 看大图：第 3 张, Help: 看大图：苏落的相机 · 正面（锚点）
+				303 button Description: 加素材, Help: 加一组素材
+					304 text +
+					305 text 加素材
+			306 container
+				307 text 视频提示词 [Shot 4] At 00:10.000, 预览不显示提示词
+			308 text 画面提示词
+			309 text 预览不显示提示词
+			310 text 说明
+			311 container
+				312 text — 双击改
+			313 container
+				314 text 节拍 5
+				315 button 上移一镜
+					316 image
+				317 button (disabled) 下移一镜
+					318 image
+				319 button 复制这一镜，放在它后面（不带分镜图）
+					320 image
+				321 button 删除这一镜
+					322 image
+				323 button 在第 4 镜后面加一镜
+					324 image
+		325 container
+			326 heading 段末 同场的下一段从这里开场, Value: 3
+				327 text 段末  同场的下一段从这里开场
+			328 text 段末走位 预览不显示提示词
+		329 container
+			330 heading 声音, Value: 2
+				331 text 声音
+			332 text overall_soundscape: 预览不显示提示词 non_diegetic_music: 预览不显示提示词
+		333 container
+			334 text 还没有成片 4 镜 · 12.5s。有分镜图的镜头按图出，没有的靠下面「引用素材」认脸认景
+			335 content list 镜头时间轴
+				336 button #1 · 2.5s, Help: #1 · wide · 2.5s
+				337 button #2 · 2.5s, Help: #2 · medium · 2.5s
+				338 button #3 · 5s, Help: #3 · medium · 5s
+				339 button #4 · 2.5s, Help: #4 · close · 2.5s
+			340 button 生成视频
+			341 button (collapsed) ▸ 生成设置 ComfyUI / H3 · 16:9 · 720p, Secondary Actions: Expand
+				342 text ▸
+				343 text 生成设置
+				344 text ComfyUI / H3 · 16:9 · 720p
+			345 container
+				346 text 引用素材
+				347 text 3 / 10
+				348 button + 加素材
+			349 text 场景
+			350 link Description: 酒店·绯闻现场, Value: reelbenchai.com/v1/p/4cbd73adcc15/art/scenes/S01
+			351 text #1 #2 #3 #4
+			352 button 从本段去掉酒店·绯闻现场
+			353 button 酒店·绯闻现场 正面（锚点） 锚点, Help: 场景「酒店·绯闻现场」· 正面（锚点） 上传第 1 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+				354 image 酒店·绯闻现场 正面（锚点）
+				355 text 锚点
+			356 button Description: 看大图：第 1 张, Help: 看大图：酒店·绯闻现场 · 正面（锚点）
+			357 button +, Help: 给酒店·绯闻现场换图或多加一张
+			358 text field (settable) 备注会写进提示词里这组图的说明
+			359 text 角色
+			360 link Description: 苏落, Value: reelbenchai.com/v1/p/4cbd73adcc15/cast/%E8%8B%8F%E8%90%BD
+			361 text #1 #2 #3 #4
+			362 button 从本段去掉苏落
+			363 button 苏落 正面全身（锚点） 锚点, Help: 角色「苏落」· 正面全身（锚点） 上传第 2 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+				364 image 苏落 正面全身（锚点）
+				365 text 锚点
+			366 button Description: 看大图：第 2 张, Help: 看大图：苏落 · 正面全身（锚点）
+			367 checkbox 10s 音频, Help: 苏落的角色音频（10 秒）：出片时当音色参考。点一下不带, Value: 1
+				368 image
+				369 text 10s
+				370 text 音频
+			371 button +, Help: 给苏落换图或多加一张
+			372 text field (settable) 备注会写进提示词里这组图的说明
+			373 text 道具
+			374 link Description: 苏落的相机, Value: reelbenchai.com/v1/p/4cbd73adcc15/art/props/P01
+			375 text #1 #2 #3 #4
+			376 button 从本段去掉苏落的相机
+			377 button 苏落的相机 正面（锚点） 锚点, Help: 道具「苏落的相机」· 正面（锚点） 上传第 3 张 已过期：画它的依据改过了。还能发，但可能跟现在的设定对不上 点一下换图
+				378 image 苏落的相机 正面（锚点）
+				379 text 锚点
+			380 button Description: 看大图：第 3 张, Help: 看大图：苏落的相机 · 正面（锚点）
+			381 button +, Help: 给苏落的相机换图或多加一张
+			382 text field (settable) 备注会写进提示词里这组图的说明
+			383 text 本段 1 人：苏落
+		384 text 日志 0 KB
+		385 text · 图片 0 KB
+		386 text · 视频 0 KB
+		387 link Description: 清理, Value: reelbenchai.com/v1/logs
+		388 text 预览
+		389 text 站上的演示程序，只读
+		390 button 获取工作台
+	392 container 选素材
+		393 splitter 拖动调整宽度
+		394 container
+			395 heading 选素材, Value: 3
+				396 text 选素材
+			397 text 用在：第 1 镜
+			398 button 完成
+		399 container
+			400 text 场景
+			401 button 酒店·绯闻现场 在用 · 正面（锚点）
+				402 text 酒店·绯闻现场
+				403 text 在用 · 正面（锚点）
+			404 button 苏落的公寓及楼下 未引用
+				405 text 苏落的公寓及楼下
+				406 text 未引用
+			407 button 周赟的工作室 未引用
+				408 text 周赟的工作室
+				409 text 未引用
+			410 button 餐厅 未引用
+				411 text 餐厅
+				412 text 未引用
+			413 button 废弃工厂 未引用
+				414 text 废弃工厂
+				415 text 未引用
+			416 text 角色
+			417 button 苏落 在用 · 正面全身（锚点）
+				418 text 苏落
+				419 text 在用 · 正面全身（锚点）
+			420 button 周赟 未引用
+				421 text 周赟
+				422 text 未引用
+			423 button 宋晓 未引用
+				424 text 宋晓
+				425 text 未引用
+			426 button 黎宇 未引用
+				427 text 黎宇
+				428 text 未引用
+			429 button 莉莉 未引用
+				430 text 莉莉
+				431 text 未引用
+			432 button 主编 未引用
+				433 text 主编
+				434 text 未引用
+			435 button 林晚晴 未引用
+				436 text 林晚晴
+				437 text 未引用
+			438 button 警察 未引用
+				439 text 警察
+				440 text 未引用
+			441 text 道具
+			442 button 苏落的相机 在用 · 正面（锚点）
+				443 text 苏落的相机
+				444 text 在用 · 正面（锚点）
+			445 button 被下药的酒 未引用
+				446 text 被下药的酒
+				447 text 未引用
+			448 button 苏落的手机 未引用
+				449 text 苏落的手机
+				450 text 未引用
+			451 button 苏落捧来的绿植 未引用
+				452 text 苏落捧来的绿植
+				453 text 未引用
+		454 container
+			455 heading 角色 · 苏落, Value: 4
+				490 text 角色 · 苏落
+			457 link Description: 详情 →, Help: 打开「苏落」的详情页：提示词、历史版本、确认锚点都在那里, Value: reelbenchai.com/v1/p/4cbd73adcc15/cast/%E8%8B%8F%E8%90%BD
+			491 text 一组 4 张：锚点是照文字画的那张，其余都是照锚点改的。 点图勾选或取消，一组可以勾好几张；一张不勾，这一组留在列表里但不发图。
+			492 button 正面全身（锚点） 默认 过期 正面全身（锚点）, Help: 点一下不发这张
+				493 image 正面全身（锚点）
+				494 text 默认
+				495 text 过期
+				496 text 正面全身（锚点）
+			497 button 看大图：正面全身（锚点）
+				498 image
+			499 button (disabled) 多人同框时加上，脸更稳 没出 正脸大头照, Help: 这张还没出，点中间的「出图」
+				500 text 多人同框时加上，脸更稳 没出 正脸大头照
+			501 button (disabled) 出图, Help: 锚点过期了：先在详情页重出锚点
+				502 image
+				503 text 出图
+			504 button (disabled) 没出 90° 侧面, Help: 这张还没出，点中间的「出图」
+				505 text 没出 90° 侧面
+			506 button (disabled) 出图, Help: 锚点过期了：先在详情页重出锚点
+				507 image
+				508 text 出图
+			509 button (disabled) 没出 背面, Help: 这张还没出，点中间的「出图」
+				510 text 没出 背面
+			511 button (disabled) 出图, Help: 锚点过期了：先在详情页重出锚点
+				512 image
+				513 text 出图
+		486 container
+			487 text 第 1 镜发 3 张 · 上限 10
+			488 button 从列表去掉
+			489 button 用默认（只发锚点）
+
+The focused UI element is 417 button 苏落 在用 · 正面全身（锚点）
