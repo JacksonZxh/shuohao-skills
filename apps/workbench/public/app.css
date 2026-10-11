@@ -1,0 +1,114 @@
+:root {
+  color-scheme: light;
+  --paper: #f4efe6;
+  --ink: #241c16;
+  --muted: #6d5e52;
+  --line: #e0d3c4;
+  --cinnabar: #8d2f24;
+  --card: #fffaf3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(141, 47, 36, 0.08), transparent 28rem),
+    var(--paper);
+  color: var(--ink);
+  font: 16px/1.6 "Iowan Old Style", "Palatino Linotype", Palatino, "Songti SC", serif;
+}
+
+main {
+  width: min(44rem, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 3.5rem 0 4rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.4rem;
+  color: var(--cinnabar);
+  font: 600 0.78rem/1.4 ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.6rem;
+  font-weight: 650;
+  letter-spacing: -0.03em;
+}
+
+.lede,
+p {
+  color: var(--muted);
+}
+
+.panel {
+  margin-top: 1.25rem;
+  padding: 1.1rem 1.2rem 1.2rem;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+}
+
+.panel h2 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  background: var(--ink);
+  color: var(--paper);
+  font: 600 0.85rem/1 ui-sans-serif, system-ui, sans-serif;
+  cursor: pointer;
+}
+
+.summary {
+  margin: 0.8rem 0 0;
+  color: var(--ink);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 8rem 1fr;
+  gap: 0.35rem 0.8rem;
+  margin: 1rem 0 0;
+}
+
+dt {
+  color: var(--muted);
+  font: 600 0.82rem/1.4 ui-sans-serif, system-ui, sans-serif;
+}
+
+dd {
+  margin: 0;
+}
+
+ul {
+  margin: 0.7rem 0 0;
+  padding-left: 1.1rem;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.1rem;
+  }
+
+  dl {
+    grid-template-columns: 1fr;
+  }
+}

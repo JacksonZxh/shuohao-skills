@@ -1,0 +1,30 @@
+{
+  "rawJsonR2ThresholdBytes": 262144,
+  "d1MaxRowBytes": 2000000,
+  "profiles": {
+    "local": {
+      "appEnv": "local",
+      "workerName": "shuohao-workbench-local",
+      "databaseName": "shuohao-workbench-local",
+      "databaseId": "00000000-0000-4000-8000-0000000000a1",
+      "bucketName": "shuohao-workbench-local",
+      "remoteResources": "unprovisioned"
+    },
+    "preview": {
+      "appEnv": "preview",
+      "workerName": "shuohao-workbench-preview",
+      "databaseName": "shuohao-workbench-preview",
+      "databaseId": "00000000-0000-4000-8000-0000000000a2",
+      "bucketName": "shuohao-workbench-preview",
+      "remoteResources": "unprovisioned"
+    },
+    "production": {
+      "appEnv": "production",
+      "workerName": "shuohao-workbench-production",
+      "databaseName": "shuohao-workbench-production",
+      "databaseId": "00000000-0000-4000-8000-0000000000a3",
+      "bucketName": "shuohao-workbench-production",
+      "remoteResources": "unprovisioned"
+    }
+  }
+}

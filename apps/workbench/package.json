@@ -1,0 +1,31 @@
+{
+  "name": "@shuohao/workbench",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "vitest run",
+    "typecheck": "wrangler types && tsc --noEmit -p tsconfig.json && tsc --noEmit -p test/tsconfig.json",
+    "migrate:local": "wrangler d1 migrations apply DB --local",
+    "check:config": "node scripts/check-config.mjs",
+    "test:migrations": "node scripts/reapply-migrations.mjs",
+    "test:dev": "node scripts/smoke-dev.mjs",
+    "preflight:preview": "node scripts/preflight-deploy.mjs preview",
+    "preflight:production": "node scripts/preflight-deploy.mjs production",
+    "deploy:preview": "node scripts/preflight-deploy.mjs preview && wrangler deploy --env preview --no-x-provision",
+    "deploy:production": "node scripts/preflight-deploy.mjs production && wrangler deploy --env production --no-x-provision",
+    "cf-typegen": "wrangler types",
+    "test:ci": "npm run typecheck && npm test && npm run check:config && npm run test:migrations && node scripts/expect-deploy-refused.mjs && npm run test:dev"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-plugin": "^1.4.0",
+    "@types/node": "^26.6.5",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3",
+    "wrangler": "^4.149.0"
+  }
+}

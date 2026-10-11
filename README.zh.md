@@ -146,7 +146,9 @@ skills/<skill-name>/
 for f in skills/*/scripts/selftest.mjs; do node "$f"; done
 ```
 
-没有配 CI——自测足够快（1 秒），本地跑一次比等 CI 更省事。**只在 macOS + Node 24 上验过**；代码没有平台相关调用，Linux 和更低版本 Node 理论上没问题，但没验。
+六个 skill 仍然没有 CI。自测足够快（1 秒），本地跑一次比等流水线更省事。**只在 macOS + Node 24 上验过**；代码没有平台相关调用，Linux 和更低版本 Node 理论上没问题，但没验。
+
+工作台脚手架在 `apps/workbench`，和 skill 分开，检查在 `.github/workflows/workbench.yml`。启动、迁移和测试命令见 [apps/workbench/README.md](apps/workbench/README.md)。当前只交付本地壳、健康检查、D1 初始迁移和 R2 私有读取边界。文稿导入、AI Gateway 调用和本机执行器都还没有实现，远程资源也还没有部署。
 
 ## 端到端 demo 工作目录约定
 

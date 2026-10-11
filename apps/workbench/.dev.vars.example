@@ -1,0 +1,7 @@
+# 复制为本目录的 .dev.vars 后再填写本机密钥。
+# .dev.vars 不进入版本库，也不会在 wrangler deploy 时自动上传。
+# 远程密钥要使用 wrangler secret put，并且按环境分别设置。
+# 下面留空。不要把真实令牌写进这个示例文件。
+
+EXECUTOR_TOKEN=
+AI_GATEWAY_TOKEN=
