@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>烁皓工作台</title>
+    <link rel="stylesheet" href="/app.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">M1 · 本地脚手架</p>
+        <h1>烁皓工作台</h1>
+        <p class="lede">
+          这是 Cloudflare Workers 上的静态壳和健康检查。文稿导入、AI Gateway 调用、本机执行器都还没有实现。
+        </p>
+      </header>
+
+      <section class="panel" aria-labelledby="status-heading">
+        <div class="panel-head">
+          <h2 id="status-heading">运行状态</h2>
+          <button id="refresh" type="button">重新检查</button>
+        </div>
+        <p id="summary" class="summary">正在读取健康检查。</p>
+        <dl id="status"></dl>
+      </section>
+
+      <section class="panel">
+        <h2>尚未实现</h2>
+        <ul>
+          <li>文稿导入与导出</li>
+          <li>AI Gateway 的真实调用</li>
+          <li>本机执行器</li>
+        </ul>
+      </section>
+
+      <section class="panel">
+        <h2>媒体读取</h2>
+        <p>素材桶保持私有。这个页面不直接读取对象内容，匿名请求也不会拿到文件字节。</p>
+      </section>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

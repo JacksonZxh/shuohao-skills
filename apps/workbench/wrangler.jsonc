@@ -1,0 +1,151 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "shuohao-workbench-local",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-11",
+  "compatibility_flags": ["nodejs_compat"],
+  // 顶层只服务本地 wrangler dev / 本地迁移。不要把它当成 production 部署目标。
+  // preview 与 production 的资源名、database_id 都不同，且目前全是未开通占位。
+  // 账户侧还没有绑定这些库和桶。部署脚本会拒绝，不能用 production 顶替 preview。
+  // 直接执行 wrangler deploy 可能触发资源自动创建，请使用 npm run deploy:*，当前也会被预检拦住。
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 0.01
+    }
+  },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+  "secrets": {
+    "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN"]
+  },
+  "vars": {
+    "APP_ENV": "local",
+    "MEDIA_PUBLIC": "false",
+    "REMOTE_RESOURCES": "unprovisioned",
+    "D1_DATABASE_NAME": "shuohao-workbench-local",
+    "D1_DATABASE_ID": "00000000-0000-4000-8000-0000000000a1",
+    "R2_BUCKET_NAME": "shuohao-workbench-local",
+    "AI_GATEWAY_BASE_URL": "",
+    "AI_GATEWAY_ACCOUNT_ID": "",
+    "AI_GATEWAY_GATEWAY_ID": ""
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "shuohao-workbench-local",
+      "database_id": "00000000-0000-4000-8000-0000000000a1",
+      "migrations_dir": "migrations",
+      "remote": false
+    }
+  ],
+  "r2_buckets": [
+    {
+      "binding": "MEDIA",
+      "bucket_name": "shuohao-workbench-local",
+      "remote": false
+    }
+  ],
+  "env": {
+    "preview": {
+      "name": "shuohao-workbench-preview",
+      "workers_dev": true,
+      "observability": {
+        "enabled": true,
+        "logs": { "enabled": true, "head_sampling_rate": 1 },
+        "traces": { "enabled": true, "head_sampling_rate": 0.01 }
+      },
+      "assets": {
+        "directory": "./public",
+        "binding": "ASSETS",
+        "not_found_handling": "single-page-application",
+        "run_worker_first": ["/api/*"]
+      },
+      "secrets": {
+        "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN"]
+      },
+      "vars": {
+        "APP_ENV": "preview",
+        "MEDIA_PUBLIC": "false",
+        "REMOTE_RESOURCES": "unprovisioned",
+        "D1_DATABASE_NAME": "shuohao-workbench-preview",
+        "D1_DATABASE_ID": "00000000-0000-4000-8000-0000000000a2",
+        "R2_BUCKET_NAME": "shuohao-workbench-preview",
+        "AI_GATEWAY_BASE_URL": "",
+        "AI_GATEWAY_ACCOUNT_ID": "",
+        "AI_GATEWAY_GATEWAY_ID": ""
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "shuohao-workbench-preview",
+          "database_id": "00000000-0000-4000-8000-0000000000a2",
+          "migrations_dir": "migrations",
+          "remote": false
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "MEDIA",
+          "bucket_name": "shuohao-workbench-preview",
+          "remote": false
+        }
+      ]
+    },
+    "production": {
+      "name": "shuohao-workbench-production",
+      "workers_dev": true,
+      "observability": {
+        "enabled": true,
+        "logs": { "enabled": true, "head_sampling_rate": 1 },
+        "traces": { "enabled": true, "head_sampling_rate": 0.01 }
+      },
+      "assets": {
+        "directory": "./public",
+        "binding": "ASSETS",
+        "not_found_handling": "single-page-application",
+        "run_worker_first": ["/api/*"]
+      },
+      "secrets": {
+        "required": ["EXECUTOR_TOKEN", "AI_GATEWAY_TOKEN"]
+      },
+      "vars": {
+        "APP_ENV": "production",
+        "MEDIA_PUBLIC": "false",
+        "REMOTE_RESOURCES": "unprovisioned",
+        "D1_DATABASE_NAME": "shuohao-workbench-production",
+        "D1_DATABASE_ID": "00000000-0000-4000-8000-0000000000a3",
+        "R2_BUCKET_NAME": "shuohao-workbench-production",
+        "AI_GATEWAY_BASE_URL": "",
+        "AI_GATEWAY_ACCOUNT_ID": "",
+        "AI_GATEWAY_GATEWAY_ID": ""
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "shuohao-workbench-production",
+          "database_id": "00000000-0000-4000-8000-0000000000a3",
+          "migrations_dir": "migrations",
+          "remote": false
+        }
+      ],
+      "r2_buckets": [
+        {
+          "binding": "MEDIA",
+          "bucket_name": "shuohao-workbench-production",
+          "remote": false
+        }
+      ]
+    }
+  }
+}
