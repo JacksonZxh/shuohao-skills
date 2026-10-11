@@ -1,3 +1,4 @@
+import { exportLibraryDocument } from "../library/export";
 import { json } from "../http";
 import { SKILLS, type ImportPlanner, type InputDocument } from "../contracts/import";
 import { Operator } from "./auth";
@@ -53,9 +54,29 @@ export async function handleProjectApi(request: Request, env: PlatformEnv, plann
       }
       return json(201, { ok: true, ...await repository.createProject({ name: body.name, source: body.source, lang: body.lang }) });
     }
-    const route = /^\/api\/projects\/([^/]+)\/(snapshot|imports|reconcile|documents\/([^/]+)\/raw)$/.exec(url.pathname);
+    const route = /^\/api\/projects\/([^/]+)\/(snapshot|exports|imports|reconcile|documents\/([^/]+)\/raw|characters\/([^/]+))$/.exec(url.pathname);
     if (!route) throw new PlatformError(404, "not_found", "没有这个平台接口。");
     const projectId = route[1]!;
+    if (route[2]?.startsWith("characters/") && request.method === "PATCH") {
+      if (!planner) throw new PlatformError(501,"adapter_unavailable","业务适配器尚未接入。");
+      const body=await bodyObject(request);allowFields(body,["oneLiner","expectedRevision"]);
+      if (typeof body.oneLiner !== "string" || !body.oneLiner.trim() || body.oneLiner.length>2000 ||
+          typeof body.expectedRevision !== "number" || !Number.isSafeInteger(body.expectedRevision)) throw new PlatformError(422,"invalid_edit","需要非空 oneLiner 和 expectedRevision。");
+      const snapshot=await repository.snapshot(projectId);
+      if (snapshot.revision !== body.expectedRevision) throw new PlatformError(409,"revision_conflict","项目已更新，请重新读取。");
+      const row=snapshot.entities.character.find(r=>r.id===route[4]);
+      if (!row) throw new PlatformError(404,"character_not_found","当前项目没有该角色。");
+      const document=exportLibraryDocument(snapshot,"novel-characters");
+      const character=Array.isArray(document.characters) ? document.characters.find(v=>v && typeof v==="object"&&!Array.isArray(v)&&v.name===row.name):undefined;
+      if (!character || typeof character!=="object" || Array.isArray(character)) throw new PlatformError(404,"character_not_found","角色卡尚未建立。");
+      character.oneLiner=body.oneLiner;
+      return json(200,{ok:true,...await repository.importDocuments(projectId,[{skill:"novel-characters",raw:JSON.stringify(document)}],planner,{mode:"update",expectedRevision:body.expectedRevision,reservedQueries:12})});
+    }
+    if (route[2] === "exports" && request.method === "GET") {
+      const skill = SKILLS.find(s => s === url.searchParams.get("skill"));
+      if (!skill) throw new PlatformError(422,"invalid_skill","导出需要有效 skill 参数。");
+      return json(200, { ok:true, document:exportLibraryDocument(await repository.snapshot(projectId),skill) });
+    }
     if (route[2] === "snapshot" && request.method === "GET") return json(200, { ok: true, snapshot: await repository.snapshot(projectId) });
     if (route[2]?.startsWith("documents/") && request.method === "GET") {
       return new Response(await repository.readRaw(projectId, route[3]!), { headers: {

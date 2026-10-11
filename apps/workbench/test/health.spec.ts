@@ -37,7 +37,7 @@ describe("健康检查", () => {
     expect(body.resources.bucketName).toBe("shuohao-workbench-local");
     expect(body.resources.databaseName).not.toBe("shuohao-workbench-production");
     expect(body.deployment.remote).toBe("not_deployed");
-    expect(body.features.import.status).toBe("not_implemented");
+    expect(body.features.import.status).toBe("implemented");
     expect(body.features.ai_gateway.status).toBe("unverified");
     expect(body.features.ai_gateway.calls).toBe("not_implemented");
     expect(body.features.ai_gateway.verifiedAt).toBeNull();

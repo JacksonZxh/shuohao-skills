@@ -82,3 +82,18 @@ identities是项目+skill+entityKind+sourceKey映射，必须指向本项目已�
 `npm run test:ci`包含真实Workers运行时的D1/R2集成测试。技术规划器不是业务适配器；Grok接入后仍须运行[19项独立验收](../../../docs/acceptance/pr2/cases.json)，特别是语义身份匹配与修改后导出。F1测试验证平台鉴权、修订、部分patch、回滚、并发、UTF-8阈值、对象恢复、白名单和预算，测试结果与缺口在PR中记录。
 
 依据：[D1 batch](https://developers.cloudflare.com/d1/worker-api/d1-database/)、[R2条件写入](https://developers.cloudflare.com/r2/api/workers/workers-api-reference/)、[Workers Web Crypto](https://developers.cloudflare.com/workers/runtime-apis/web-crypto/)。
+
+## PR2 接入更新
+
+Codex 已接管业务开发。真实 Worker 入口注册 `library/plan.ts`，outline/cast/art 导入通过原接口执行；不再返回适配器缺失501。纯适配器检查结构、源码/姓名冲突、别名歧义和引用；整包拒绝时仅保留失败审计。未知字段按文稿分别保留，outline层级与cast重要性独立保存。当前不提供核心实体删除或模糊姓名合并。
+
+新增接口（均要求平台鉴权）：
+
+| 路径 | 方法与输入 | 结果 |
+| --- | --- | --- |
+| `/api/projects/{UUID}/exports?skill=novel-characters` | GET；skill也接受novel-outline、novel-art | 200，`{ok:true,document}`；规范化字段反映当前数据库，未知字段从不可变文稿合并 |
+| `/api/projects/{UUID}/characters/{characterUUID}` | PATCH `{oneLiner,expectedRevision}` | 200，ImportResult；oneLiner非空最多2000字符；旧修订409，其他项目角色404 |
+
+角色编辑复用显式文稿更新与原子提交，不直接绕过审计/历史/修订。导出不泄漏内部UUID，carriedBy保留原别名；原文历史读取仍返回原字节。编辑接口为前置快照预留12条查询，计入提交预算。
+
+平台结构校验不冒充小说证据核验与创作质量门。CI通过真实HTTP导入、数据库编辑、三类导出、原skill CLI（携带独立原故事及导出的角色上下文）和新项目再导入验收。运行时原著证据与创作质量校验、其他三种skill、页面、模型和任务队列仍待后续实现。

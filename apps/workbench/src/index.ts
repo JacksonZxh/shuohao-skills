@@ -4,6 +4,7 @@ import { handleHealth } from "./health";
 import { jsonError } from "./http";
 import { handlePrivateMedia } from "./media";
 
+import { planLibraryImport } from "./library/plan";
 import { handleProjectApi } from "./platform/http";
 
 const PATH_QUERY_KEYS = ["path", "file", "filepath", "dir", "localpath"];
@@ -56,7 +57,7 @@ export async function handleApi(request: Request, url: URL, env: Env): Promise<R
   }
 
   if (url.pathname === "/api/projects" || url.pathname.startsWith("/api/projects/")) {
-    return handleProjectApi(request, env);
+    return handleProjectApi(request, env, planLibraryImport);
   }
 
   if (url.pathname === "/api/media" || url.pathname.startsWith("/api/media/")) {
