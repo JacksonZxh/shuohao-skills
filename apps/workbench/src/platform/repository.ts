@@ -117,7 +117,7 @@ export class ProjectRepository {
     }
   }
   async importDocuments(projectId: string, inputs: InputDocument[], planner: ImportPlanner,
-    options: { expectedRevision?: number; mode?: "create" | "update" } = {}): Promise<ImportResult> {
+    options: { expectedRevision?: number; mode?: "create" | "update"; reservedQueries?: number } = {}): Promise<ImportResult> {
     this.operator.assert(); await this.requireProject(projectId);
     const documents = await prepareDocuments(inputs);
     if (options.mode === "update" && !Number.isSafeInteger(options.expectedRevision)) {
@@ -187,7 +187,7 @@ export class ProjectRepository {
     statements.push(...insertRows(this.db, "import_entity_map", ["import_run_id","skill","source_key","entity_type","entity_id"],
       plan.identities.map(identity => [commitId,identity.skill,identity.sourceKey,identity.entityKind,identity.entityId])));
     const stageQueries = stored.filter(location => location.r2Key !== null).length;
-    const estimatedQueries = 2 + ENTITY_ORDER.length + 3 + documents.length + stageQueries + statements.length + 2;
+    const estimatedQueries = (options.reservedQueries ?? 0) + 2 + ENTITY_ORDER.length + 3 + documents.length + stageQueries + statements.length + 2;
     if (estimatedQueries > this.queryBudget) throw new PlatformError(413, "query_budget", "规划超过当前单请求查询预算；没有写入实体或暂存对象。");
     // 所有规划/预算/行大小守卫通过后再上传原文；对象存在和字节核验在batch外。
     for (let index = 0; index < documents.length; index++) {

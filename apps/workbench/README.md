@@ -8,7 +8,7 @@ Workers 静态壳、健康检查、D1 初始迁移、R2 私有读取边界。这
 
 这次没有做下面这些事，健康检查也会照实返回：
 
-- 六类业务适配器与导出尚未接入；平台支持注入outline/cast/art规划器，实际Worker导入入口在接入前返回501
+- script、storyboard、character-refs适配尚未接入；outline/cast/art已支持真实导入、规范化导出和角色简介编辑
 - AI Gateway 的真实调用。配置字段可以留空。填了也不代表已经连通，状态保持未验证
 - 本机执行器。只有心跳鉴权占位：没有密钥或令牌不对会拒绝；令牌正确也只返回尚未实现，不写业务数据
 - 远程部署、远程迁移、真实素材上传
@@ -86,7 +86,7 @@ npm run dev
 - `GET /api/health`：数据库、私有桶、未部署、尚未实现的能力
 - `GET /api/media/...` 与 `GET /api/objects/...`：403，不返回对象内容
 - 平台项目创建/列表、快照、原文读取与对账：详见[HTTP契约](docs/api.md)，需要平台令牌
-- `POST /api/projects/{id}/imports`：适配器未接入时501；注入后的平台函数已经有真实D1/R2测试
+- `POST /api/projects/{id}/imports`：已接入outline/cast/art业务规划器，执行结构/身份/引用预检与D1/R2原子提交
 - `POST /api/import`、`POST /api/gateway/...`：旧占位入口501
 - `POST /api/executor/heartbeat`：鉴权占位
 
@@ -143,3 +143,5 @@ npm run deploy:production
 - [Wrangler 环境](https://developers.cloudflare.com/workers/wrangler/environments/)
 - [Vitest 集成](https://developers.cloudflare.com/workers/testing/vitest-integration/)
 - [Workers 密钥](https://developers.cloudflare.com/workers/configuration/secrets/)
+
+PR2验收：独立19项案例接入实际D1/R2测试；`test:dev`额外验证HTTP导入、角色编辑、三份导出通过原skill CLI并再导入新项目。证据校验仍需原小说上下文，平台结构校验不代替完整质量门。

@@ -33,7 +33,7 @@ export async function handleHealth(env: Env, config: ConfigSuccess): Promise<Res
       reason: config.deploymentReason,
     },
     features: {
-      import: { status: "not_implemented" },
+      import: { status: "implemented", skills: ["novel-outline", "novel-characters", "novel-art"], validation: "structure_and_identity", exports: true },
       ai_gateway: config.gateway,
       executor: {
         status: "not_implemented",
